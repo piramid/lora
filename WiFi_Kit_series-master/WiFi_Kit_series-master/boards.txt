@@ -1,0 +1,2671 @@
+# Official Espressif options
+menu.UploadSpeed=Upload Speed
+menu.USBMode=USB Mode
+menu.CDCOnBoot=USB CDC On Boot
+menu.MSCOnBoot=USB Firmware MSC On Boot
+menu.DFUOnBoot=USB DFU On Boot
+menu.UploadMode=Upload Mode
+menu.CPUFreq=CPU Frequency
+menu.FlashFreq=Flash Frequency
+menu.FlashMode=Flash Mode
+menu.FlashSize=Flash Size
+menu.PartitionScheme=Partition Scheme
+menu.DebugLevel=Core Debug Level
+menu.PSRAM=PSRAM
+menu.LoopCore=Arduino Runs On
+menu.EventsCore=Events Run On
+menu.MemoryType=Memory Type
+menu.EraseFlash=Erase All Flash Before Sketch Upload
+menu.JTAGAdapter=JTAG Adapter
+menu.ZigbeeMode=Zigbee Mode
+menu.PinNumbers=Pin Numbering
+
+# Custom options
+menu.Revision=Board Revision
+menu.LORAWAN_REGION=LoRaWan Region
+menu.LoRaWanDebugLevel=LoRaWan Debug Level
+menu.LORAWAN_DEVEUI=LoRaWan DevEUI
+menu.LORAWAN_PREAMBLE_LENGTH=LoRaWan Preamble Length
+menu.SLOW_CLK_TPYE=Slow Clk Type(only for LoRaWAN)
+menu.einksize=E-Ink Display Size
+menu.NetworkLogLevel=Network Log Level
+##############################################################
+### DO NOT PUT BOARDS ABOVE THE OFFICIAL ESPRESSIF BOARDS! ###
+##############################################################
+
+heltec_wifi_kit_32.name=WiFi Kit 32
+
+heltec_wifi_kit_32.bootloader.tool=esptool_py
+heltec_wifi_kit_32.bootloader.tool.default=esptool_py
+
+heltec_wifi_kit_32.upload.tool=esptool_py
+heltec_wifi_kit_32.upload.tool.default=esptool_py
+heltec_wifi_kit_32.upload.tool.network=esp_ota
+
+heltec_wifi_kit_32.upload.maximum_size=1310720
+heltec_wifi_kit_32.upload.maximum_data_size=327680
+heltec_wifi_kit_32.upload.flags=
+heltec_wifi_kit_32.upload.extra_flags=
+
+heltec_wifi_kit_32.serial.disableDTR=true
+heltec_wifi_kit_32.serial.disableRTS=true
+
+heltec_wifi_kit_32.build.tarch=xtensa
+heltec_wifi_kit_32.build.bootloader_addr=0x1000
+heltec_wifi_kit_32.build.target=esp32
+heltec_wifi_kit_32.build.mcu=esp32
+heltec_wifi_kit_32.build.core=esp32
+heltec_wifi_kit_32.build.variant=heltec_wifi_kit_32
+heltec_wifi_kit_32.build.board=HELTEC_WIFI_KIT_32
+
+heltec_wifi_kit_32.build.f_cpu=240000000L
+heltec_wifi_kit_32.build.flash_size=4MB
+heltec_wifi_kit_32.build.flash_freq=80m
+heltec_wifi_kit_32.build.flash_mode=dio
+heltec_wifi_kit_32.build.boot=dio
+heltec_wifi_kit_32.build.partitions=default
+heltec_wifi_kit_32.build.defines=
+heltec_wifi_kit_32.build.band=LoRaWAN_NONE
+heltec_wifi_kit_32.build.LoRaWanDebugLevel=0
+
+heltec_wifi_kit_32.menu.PSRAM.disabled=Disabled
+heltec_wifi_kit_32.menu.PSRAM.disabled.build.defines=
+heltec_wifi_kit_32.menu.PSRAM.disabled.build.extra_libs=
+heltec_wifi_kit_32.menu.PSRAM.enabled=Enabled
+heltec_wifi_kit_32.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-issue -mfix-esp32-psram-cache-strategy=memw
+heltec_wifi_kit_32.menu.PSRAM.enabled.build.extra_libs=
+
+heltec_wifi_kit_32.menu.CPUFreq.240=240MHz (WiFi/BT)
+heltec_wifi_kit_32.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wifi_kit_32.menu.CPUFreq.160=160MHz (WiFi/BT)
+heltec_wifi_kit_32.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wifi_kit_32.menu.CPUFreq.80=80MHz (WiFi/BT)
+heltec_wifi_kit_32.menu.CPUFreq.80.build.f_cpu=80000000L
+
+heltec_wifi_kit_32.menu.UploadSpeed.921600=921600
+heltec_wifi_kit_32.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wifi_kit_32.menu.UploadSpeed.115200=115200
+heltec_wifi_kit_32.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wifi_kit_32.menu.UploadSpeed.256000.windows=256000
+heltec_wifi_kit_32.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wifi_kit_32.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wifi_kit_32.menu.UploadSpeed.230400=230400
+heltec_wifi_kit_32.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wifi_kit_32.menu.UploadSpeed.460800.linux=460800
+heltec_wifi_kit_32.menu.UploadSpeed.460800.macosx=460800
+heltec_wifi_kit_32.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wifi_kit_32.menu.UploadSpeed.512000.windows=512000
+heltec_wifi_kit_32.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wifi_kit_32.menu.DebugLevel.none=None
+heltec_wifi_kit_32.menu.DebugLevel.none.build.code_debug=0
+heltec_wifi_kit_32.menu.DebugLevel.error=Error
+heltec_wifi_kit_32.menu.DebugLevel.error.build.code_debug=1
+heltec_wifi_kit_32.menu.DebugLevel.warn=Warn
+heltec_wifi_kit_32.menu.DebugLevel.warn.build.code_debug=2
+heltec_wifi_kit_32.menu.DebugLevel.info=Info
+heltec_wifi_kit_32.menu.DebugLevel.info.build.code_debug=3
+heltec_wifi_kit_32.menu.DebugLevel.debug=Debug
+heltec_wifi_kit_32.menu.DebugLevel.debug.build.code_debug=4
+heltec_wifi_kit_32.menu.DebugLevel.verbose=Verbose
+heltec_wifi_kit_32.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wifi_kit_32.menu.EraseFlash.none=Disabled
+heltec_wifi_kit_32.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wifi_kit_32.menu.EraseFlash.all=Enabled
+heltec_wifi_kit_32.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wifi_kit_32_V3.name=WiFi Kit 32(V3)
+
+heltec_wifi_kit_32_V3.vid.0=0x303a
+heltec_wifi_kit_32_V3.pid.0=0x1001
+
+heltec_wifi_kit_32_V3.bootloader.tool=esptool_py
+heltec_wifi_kit_32_V3.bootloader.tool.default=esptool_py
+
+heltec_wifi_kit_32_V3.upload.tool=esptool_py
+heltec_wifi_kit_32_V3.upload.tool.default=esptool_py
+heltec_wifi_kit_32_V3.upload.tool.network=esp_ota
+
+heltec_wifi_kit_32_V3.upload.maximum_size=3342336
+heltec_wifi_kit_32_V3.upload.maximum_data_size=327680
+heltec_wifi_kit_32_V3.upload.flags=
+heltec_wifi_kit_32_V3.upload.extra_flags=
+heltec_wifi_kit_32_V3.upload.use_1200bps_touch=false
+heltec_wifi_kit_32_V3.upload.wait_for_upload_port=false
+
+heltec_wifi_kit_32_V3.serial.disableDTR=false
+heltec_wifi_kit_32_V3.serial.disableRTS=false
+
+heltec_wifi_kit_32_V3.build.tarch=xtensa
+heltec_wifi_kit_32_V3.build.bootloader_addr=0x0
+heltec_wifi_kit_32_V3.build.target=esp32s3
+heltec_wifi_kit_32_V3.build.mcu=esp32s3
+heltec_wifi_kit_32_V3.build.core=esp32
+heltec_wifi_kit_32_V3.build.variant=heltec_wifi_kit_32_V3
+heltec_wifi_kit_32_V3.build.board=HELTEC_WIFI_KIT_32_V3
+
+heltec_wifi_kit_32_V3.build.usb_mode=1
+heltec_wifi_kit_32_V3.build.cdc_on_boot=0
+heltec_wifi_kit_32_V3.build.msc_on_boot=0
+heltec_wifi_kit_32_V3.build.dfu_on_boot=0
+heltec_wifi_kit_32_V3.build.f_cpu=240000000L
+heltec_wifi_kit_32_V3.build.flash_size=8MB
+heltec_wifi_kit_32_V3.build.flash_freq=80m
+heltec_wifi_kit_32_V3.build.flash_mode=dio
+heltec_wifi_kit_32_V3.build.boot=qio
+heltec_wifi_kit_32_V3.build.boot_freq=80m
+heltec_wifi_kit_32_V3.build.partitions=default_8MB
+heltec_wifi_kit_32_V3.build.loop_core=
+heltec_wifi_kit_32_V3.build.event_core=
+heltec_wifi_kit_32_V3.build.psram_type=qspi
+heltec_wifi_kit_32_V3.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_wifi_kit_32_V3.menu.LoopCore.1=Core 1
+heltec_wifi_kit_32_V3.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_wifi_kit_32_V3.menu.LoopCore.0=Core 0
+heltec_wifi_kit_32_V3.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_wifi_kit_32_V3.menu.EventsCore.1=Core 1
+heltec_wifi_kit_32_V3.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_wifi_kit_32_V3.menu.EventsCore.0=Core 0
+heltec_wifi_kit_32_V3.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_wifi_kit_32_V3.menu.CPUFreq.240=240MHz (WiFi)
+heltec_wifi_kit_32_V3.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wifi_kit_32_V3.menu.CPUFreq.160=160MHz (WiFi)
+heltec_wifi_kit_32_V3.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wifi_kit_32_V3.menu.CPUFreq.80=80MHz (WiFi)
+heltec_wifi_kit_32_V3.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_wifi_kit_32_V3.menu.CPUFreq.40=40MHz
+heltec_wifi_kit_32_V3.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_wifi_kit_32_V3.menu.CPUFreq.20=20MHz
+heltec_wifi_kit_32_V3.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_wifi_kit_32_V3.menu.CPUFreq.10=10MHz
+heltec_wifi_kit_32_V3.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_wifi_kit_32_V3.menu.UploadSpeed.921600=921600
+heltec_wifi_kit_32_V3.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wifi_kit_32_V3.menu.UploadSpeed.115200=115200
+heltec_wifi_kit_32_V3.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wifi_kit_32_V3.menu.UploadSpeed.256000.windows=256000
+heltec_wifi_kit_32_V3.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wifi_kit_32_V3.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wifi_kit_32_V3.menu.UploadSpeed.230400=230400
+heltec_wifi_kit_32_V3.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wifi_kit_32_V3.menu.UploadSpeed.460800.linux=460800
+heltec_wifi_kit_32_V3.menu.UploadSpeed.460800.macosx=460800
+heltec_wifi_kit_32_V3.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wifi_kit_32_V3.menu.UploadSpeed.512000.windows=512000
+heltec_wifi_kit_32_V3.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wifi_kit_32_V3.menu.DebugLevel.none=None
+heltec_wifi_kit_32_V3.menu.DebugLevel.none.build.code_debug=0
+heltec_wifi_kit_32_V3.menu.DebugLevel.error=Error
+heltec_wifi_kit_32_V3.menu.DebugLevel.error.build.code_debug=1
+heltec_wifi_kit_32_V3.menu.DebugLevel.warn=Warn
+heltec_wifi_kit_32_V3.menu.DebugLevel.warn.build.code_debug=2
+heltec_wifi_kit_32_V3.menu.DebugLevel.info=Info
+heltec_wifi_kit_32_V3.menu.DebugLevel.info.build.code_debug=3
+heltec_wifi_kit_32_V3.menu.DebugLevel.debug=Debug
+heltec_wifi_kit_32_V3.menu.DebugLevel.debug.build.code_debug=4
+heltec_wifi_kit_32_V3.menu.DebugLevel.verbose=Verbose
+heltec_wifi_kit_32_V3.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wifi_kit_32_V3.menu.EraseFlash.none=Disabled
+heltec_wifi_kit_32_V3.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wifi_kit_32_V3.menu.EraseFlash.all=Enabled
+heltec_wifi_kit_32_V3.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wifi_lora_32.name=WiFi LoRa 32
+
+heltec_wifi_lora_32.bootloader.tool=esptool_py
+heltec_wifi_lora_32.bootloader.tool.default=esptool_py
+
+heltec_wifi_lora_32.upload.tool=esptool_py
+heltec_wifi_lora_32.upload.tool.default=esptool_py
+heltec_wifi_lora_32.upload.tool.network=esp_ota
+
+heltec_wifi_lora_32.upload.maximum_size=1310720
+heltec_wifi_lora_32.upload.maximum_data_size=327680
+heltec_wifi_lora_32.upload.flags=
+heltec_wifi_lora_32.upload.extra_flags=
+
+heltec_wifi_lora_32.serial.disableDTR=true
+heltec_wifi_lora_32.serial.disableRTS=true
+
+heltec_wifi_lora_32.build.tarch=xtensa
+heltec_wifi_lora_32.build.bootloader_addr=0x1000
+heltec_wifi_lora_32.build.target=esp32
+heltec_wifi_lora_32.build.mcu=esp32
+heltec_wifi_lora_32.build.core=esp32
+heltec_wifi_lora_32.build.variant=heltec_wifi_lora_32
+heltec_wifi_lora_32.build.board=HELTEC_WIFI_LORA_32
+
+heltec_wifi_lora_32.build.f_cpu=240000000L
+heltec_wifi_lora_32.build.flash_size=8MB
+heltec_wifi_lora_32.build.flash_freq=80m
+heltec_wifi_lora_32.build.flash_mode=dio
+heltec_wifi_lora_32.build.boot=qio
+heltec_wifi_lora_32.build.partitions=default_8MB
+heltec_wifi_lora_32.build.psram=
+heltec_wifi_lora_32.build.defines=-D{build.band} -DMCU_ESP32_D0 -DWIFI_LORA_32 -DHELTEC_BOARD=1 -DRADIO_CHIP_SX127X -DSLOW_CLK_TPYE=0 -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH}  -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO}  {build.psram}
+
+heltec_wifi_lora_32.menu.CPUFreq.240=240MHz (WiFi/BT)
+heltec_wifi_lora_32.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wifi_lora_32.menu.CPUFreq.160=160MHz (WiFi/BT)
+heltec_wifi_lora_32.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wifi_lora_32.menu.CPUFreq.80=80MHz (WiFi/BT)
+heltec_wifi_lora_32.menu.CPUFreq.160.build.f_cpu=80000000L
+
+heltec_wifi_lora_32.menu.UploadSpeed.921600=921600
+heltec_wifi_lora_32.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wifi_lora_32.menu.UploadSpeed.115200=115200
+heltec_wifi_lora_32.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wifi_lora_32.menu.UploadSpeed.256000.windows=256000
+heltec_wifi_lora_32.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wifi_lora_32.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wifi_lora_32.menu.UploadSpeed.230400=230400
+heltec_wifi_lora_32.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wifi_lora_32.menu.UploadSpeed.460800.linux=460800
+heltec_wifi_lora_32.menu.UploadSpeed.460800.macosx=460800
+heltec_wifi_lora_32.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wifi_lora_32.menu.UploadSpeed.512000.windows=512000
+heltec_wifi_lora_32.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wifi_lora_32.menu.DebugLevel.none=None
+heltec_wifi_lora_32.menu.DebugLevel.none.build.code_debug=0
+heltec_wifi_lora_32.menu.DebugLevel.error=Error
+heltec_wifi_lora_32.menu.DebugLevel.error.build.code_debug=1
+heltec_wifi_lora_32.menu.DebugLevel.warn=Warn
+heltec_wifi_lora_32.menu.DebugLevel.warn.build.code_debug=2
+heltec_wifi_lora_32.menu.DebugLevel.info=Info
+heltec_wifi_lora_32.menu.DebugLevel.info.build.code_debug=3
+heltec_wifi_lora_32.menu.DebugLevel.debug=Debug
+heltec_wifi_lora_32.menu.DebugLevel.debug.build.code_debug=4
+heltec_wifi_lora_32.menu.DebugLevel.verbose=Verbose
+heltec_wifi_lora_32.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wifi_lora_32.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wifi_lora_32.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wifi_lora_32.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wifi_lora_32.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wifi_lora_32.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wifi_lora_32.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wifi_lora_32.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wifi_lora_32.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wifi_lora_32.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wifi_lora_32.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wifi_lora_32.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wifi_lora_32.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wifi_lora_32.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wifi_lora_32.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wifi_lora_32.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wifi_lora_32.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wifi_lora_32.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wifi_lora_32.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wifi_lora_32.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wifi_lora_32.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wifi_lora_32.menu.LoRaWanDebugLevel.0=None
+heltec_wifi_lora_32.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wifi_lora_32.menu.LoRaWanDebugLevel.1=Freq
+heltec_wifi_lora_32.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wifi_lora_32.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wifi_lora_32.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wifi_lora_32.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wifi_lora_32.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_wifi_lora_32.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wifi_lora_32.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wifi_lora_32.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wifi_lora_32.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wifi_lora_32.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wifi_lora_32.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wifi_lora_32.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wifi_lora_32.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+
+heltec_wifi_lora_32.menu.EraseFlash.none=Disabled
+heltec_wifi_lora_32.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wifi_lora_32.menu.EraseFlash.all=Enabled
+heltec_wifi_lora_32.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wifi_lora_32_V2.name=WiFi LoRa 32(V2)
+
+heltec_wifi_lora_32_V2.bootloader.tool=esptool_py
+heltec_wifi_lora_32_V2.bootloader.tool.default=esptool_py
+
+heltec_wifi_lora_32_V2.upload.tool=esptool_py
+heltec_wifi_lora_32_V2.upload.tool.default=esptool_py
+heltec_wifi_lora_32_V2.upload.tool.network=esp_ota
+
+heltec_wifi_lora_32_V2.upload.maximum_size=3342336
+heltec_wifi_lora_32_V2.upload.maximum_data_size=327680
+heltec_wifi_lora_32_V2.upload.flags=
+heltec_wifi_lora_32_V2.upload.extra_flags=
+
+heltec_wifi_lora_32_V2.serial.disableDTR=true
+heltec_wifi_lora_32_V2.serial.disableRTS=true
+
+heltec_wifi_lora_32_V2.build.tarch=xtensa
+heltec_wifi_lora_32_V2.build.bootloader_addr=0x1000
+heltec_wifi_lora_32_V2.build.target=esp32
+heltec_wifi_lora_32_V2.build.mcu=esp32
+heltec_wifi_lora_32_V2.build.core=esp32
+heltec_wifi_lora_32_V2.build.variant=heltec_wifi_lora_32_V2
+heltec_wifi_lora_32_V2.build.board=HELTEC_WIFI_LORA_32_V2
+
+heltec_wifi_lora_32_V2.build.f_cpu=240000000L
+heltec_wifi_lora_32_V2.build.flash_size=8MB
+heltec_wifi_lora_32_V2.build.flash_freq=80m
+heltec_wifi_lora_32_V2.build.flash_mode=dio
+heltec_wifi_lora_32_V2.build.boot=qio
+heltec_wifi_lora_32_V2.build.partitions=default_8MB
+heltec_wifi_lora_32_V2.build.psram=
+heltec_wifi_lora_32_V2.build.defines=-D{build.band} -DMCU_ESP32_D0 -DWIFI_LORA_32_V2 -DHELTEC_BOARD=0 -DRADIO_CHIP_SX127X -DSLOW_CLK_TPYE=0 -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH}  -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO}  {build.psram}
+
+heltec_wifi_lora_32_V2.menu.CPUFreq.240=240MHz (WiFi/BT)
+heltec_wifi_lora_32_V2.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wifi_lora_32_V2.menu.CPUFreq.160=160MHz (WiFi/BT)
+heltec_wifi_lora_32_V2.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wifi_lora_32_V2.menu.CPUFreq.80=80MHz (WiFi/BT)
+heltec_wifi_lora_32_V2.menu.CPUFreq.80.build.f_cpu=80000000L
+
+heltec_wifi_lora_32_V2.menu.UploadSpeed.921600=921600
+heltec_wifi_lora_32_V2.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wifi_lora_32_V2.menu.UploadSpeed.115200=115200
+heltec_wifi_lora_32_V2.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wifi_lora_32_V2.menu.UploadSpeed.256000.windows=256000
+heltec_wifi_lora_32_V2.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wifi_lora_32_V2.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wifi_lora_32_V2.menu.UploadSpeed.230400=230400
+heltec_wifi_lora_32_V2.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wifi_lora_32_V2.menu.UploadSpeed.460800.linux=460800
+heltec_wifi_lora_32_V2.menu.UploadSpeed.460800.macosx=460800
+heltec_wifi_lora_32_V2.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wifi_lora_32_V2.menu.UploadSpeed.512000.windows=512000
+heltec_wifi_lora_32_V2.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wifi_lora_32_V2.menu.DebugLevel.none=None
+heltec_wifi_lora_32_V2.menu.DebugLevel.none.build.code_debug=0
+heltec_wifi_lora_32_V2.menu.DebugLevel.error=Error
+heltec_wifi_lora_32_V2.menu.DebugLevel.error.build.code_debug=1
+heltec_wifi_lora_32_V2.menu.DebugLevel.warn=Warn
+heltec_wifi_lora_32_V2.menu.DebugLevel.warn.build.code_debug=2
+heltec_wifi_lora_32_V2.menu.DebugLevel.info=Info
+heltec_wifi_lora_32_V2.menu.DebugLevel.info.build.code_debug=3
+heltec_wifi_lora_32_V2.menu.DebugLevel.debug=Debug
+heltec_wifi_lora_32_V2.menu.DebugLevel.debug.build.code_debug=4
+heltec_wifi_lora_32_V2.menu.DebugLevel.verbose=Verbose
+heltec_wifi_lora_32_V2.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wifi_lora_32_V2.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wifi_lora_32_V2.menu.LoRaWanDebugLevel.0=None
+heltec_wifi_lora_32_V2.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wifi_lora_32_V2.menu.LoRaWanDebugLevel.1=Freq
+heltec_wifi_lora_32_V2.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wifi_lora_32_V2.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wifi_lora_32_V2.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wifi_lora_32_V2.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wifi_lora_32_V2.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_wifi_lora_32_V2.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wifi_lora_32_V2.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wifi_lora_32_V2.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wifi_lora_32_V2.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wifi_lora_32_V2.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wifi_lora_32_V2.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wifi_lora_32_V2.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wifi_lora_32_V2.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_wifi_lora_32_V2.menu.EraseFlash.none=Disabled
+heltec_wifi_lora_32_V2.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wifi_lora_32_V2.menu.EraseFlash.all=Enabled
+heltec_wifi_lora_32_V2.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wifi_lora_32_V3.name=WiFi LoRa 32(V3)
+heltec_wifi_lora_32_V3.vid.0=0x303a
+heltec_wifi_lora_32_V3.pid.0=0x1001
+
+heltec_wifi_lora_32_V3.bootloader.tool=esptool_py
+heltec_wifi_lora_32_V3.bootloader.tool.default=esptool_py
+
+heltec_wifi_lora_32_V3.upload.tool=esptool_py
+heltec_wifi_lora_32_V3.upload.tool.default=esptool_py
+heltec_wifi_lora_32_V3.upload.tool.network=esp_ota
+
+heltec_wifi_lora_32_V3.upload.maximum_size=3342336
+heltec_wifi_lora_32_V3.upload.maximum_data_size=327680
+heltec_wifi_lora_32_V3.upload.flags=
+heltec_wifi_lora_32_V3.upload.extra_flags=
+heltec_wifi_lora_32_V3.upload.use_1200bps_touch=false
+heltec_wifi_lora_32_V3.upload.wait_for_upload_port=false
+
+heltec_wifi_lora_32_V3.serial.disableDTR=false
+heltec_wifi_lora_32_V3.serial.disableRTS=false
+
+heltec_wifi_lora_32_V3.build.tarch=xtensa
+heltec_wifi_lora_32_V3.build.bootloader_addr=0x0
+heltec_wifi_lora_32_V3.build.target=esp32s3
+heltec_wifi_lora_32_V3.build.mcu=esp32s3
+heltec_wifi_lora_32_V3.build.core=esp32
+heltec_wifi_lora_32_V3.build.variant=heltec_wifi_lora_32_V3
+heltec_wifi_lora_32_V3.build.board=HELTEC_WIFI_LORA_32_V3
+
+heltec_wifi_lora_32_V3.build.usb_mode=1
+heltec_wifi_lora_32_V3.build.cdc_on_boot=0
+heltec_wifi_lora_32_V3.build.msc_on_boot=0
+heltec_wifi_lora_32_V3.build.dfu_on_boot=0
+heltec_wifi_lora_32_V3.build.f_cpu=240000000L
+heltec_wifi_lora_32_V3.build.flash_size=8MB
+heltec_wifi_lora_32_V3.build.flash_freq=80m
+heltec_wifi_lora_32_V3.build.flash_mode=dio
+heltec_wifi_lora_32_V3.build.boot=qio
+heltec_wifi_lora_32_V3.build.boot_freq=80m
+heltec_wifi_lora_32_V3.build.partitions=default_8MB
+heltec_wifi_lora_32_V3.build.loop_core=
+heltec_wifi_lora_32_V3.build.event_core=
+heltec_wifi_lora_32_V3.build.psram_type=qspi
+heltec_wifi_lora_32_V3.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_wifi_lora_32_V3.menu.LoopCore.1=Core 1
+heltec_wifi_lora_32_V3.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_wifi_lora_32_V3.menu.LoopCore.0=Core 0
+heltec_wifi_lora_32_V3.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_wifi_lora_32_V3.menu.EventsCore.1=Core 1
+heltec_wifi_lora_32_V3.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_wifi_lora_32_V3.menu.EventsCore.0=Core 0
+heltec_wifi_lora_32_V3.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_wifi_lora_32_V3.menu.CPUFreq.240=240MHz (WiFi)
+heltec_wifi_lora_32_V3.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wifi_lora_32_V3.menu.CPUFreq.160=160MHz (WiFi)
+heltec_wifi_lora_32_V3.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wifi_lora_32_V3.menu.CPUFreq.80=80MHz (WiFi)
+heltec_wifi_lora_32_V3.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_wifi_lora_32_V3.menu.CPUFreq.40=40MHz
+heltec_wifi_lora_32_V3.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_wifi_lora_32_V3.menu.CPUFreq.20=20MHz
+heltec_wifi_lora_32_V3.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_wifi_lora_32_V3.menu.CPUFreq.10=10MHz
+heltec_wifi_lora_32_V3.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_wifi_lora_32_V3.menu.UploadSpeed.921600=921600
+heltec_wifi_lora_32_V3.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wifi_lora_32_V3.menu.UploadSpeed.115200=115200
+heltec_wifi_lora_32_V3.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wifi_lora_32_V3.menu.UploadSpeed.256000.windows=256000
+heltec_wifi_lora_32_V3.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wifi_lora_32_V3.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wifi_lora_32_V3.menu.UploadSpeed.230400=230400
+heltec_wifi_lora_32_V3.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wifi_lora_32_V3.menu.UploadSpeed.460800.linux=460800
+heltec_wifi_lora_32_V3.menu.UploadSpeed.460800.macosx=460800
+heltec_wifi_lora_32_V3.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wifi_lora_32_V3.menu.UploadSpeed.512000.windows=512000
+heltec_wifi_lora_32_V3.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wifi_lora_32_V3.menu.DebugLevel.none=None
+heltec_wifi_lora_32_V3.menu.DebugLevel.none.build.code_debug=0
+heltec_wifi_lora_32_V3.menu.DebugLevel.error=Error
+heltec_wifi_lora_32_V3.menu.DebugLevel.error.build.code_debug=1
+heltec_wifi_lora_32_V3.menu.DebugLevel.warn=Warn
+heltec_wifi_lora_32_V3.menu.DebugLevel.warn.build.code_debug=2
+heltec_wifi_lora_32_V3.menu.DebugLevel.info=Info
+heltec_wifi_lora_32_V3.menu.DebugLevel.info.build.code_debug=3
+heltec_wifi_lora_32_V3.menu.DebugLevel.debug=Debug
+heltec_wifi_lora_32_V3.menu.DebugLevel.debug.build.code_debug=4
+heltec_wifi_lora_32_V3.menu.DebugLevel.verbose=Verbose
+heltec_wifi_lora_32_V3.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wifi_lora_32_V3.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wifi_lora_32_V3.menu.LoRaWanDebugLevel.0=None
+heltec_wifi_lora_32_V3.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wifi_lora_32_V3.menu.LoRaWanDebugLevel.1=Freq
+heltec_wifi_lora_32_V3.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wifi_lora_32_V3.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wifi_lora_32_V3.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wifi_lora_32_V3.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wifi_lora_32_V3.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_wifi_lora_32_V3.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wifi_lora_32_V3.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wifi_lora_32_V3.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wifi_lora_32_V3.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wifi_lora_32_V3.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wifi_lora_32_V3.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wifi_lora_32_V3.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wifi_lora_32_V3.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_wifi_lora_32_V3.menu.SLOW_CLK_TPYE.0=Internal (default)
+heltec_wifi_lora_32_V3.menu.SLOW_CLK_TPYE.0.build.SLOW_CLK_TPYE=0
+heltec_wifi_lora_32_V3.menu.SLOW_CLK_TPYE.1=External 32K
+heltec_wifi_lora_32_V3.menu.SLOW_CLK_TPYE.1.build.SLOW_CLK_TPYE=1
+
+heltec_wifi_lora_32_V3.build.defines=-D{build.band} -DMCU_ESP32_S3 -DHELTEC_BOARD=30 -DWIFI_LORA_32_V3 -DSLOW_CLK_TPYE={build.SLOW_CLK_TPYE} -DRADIO_CHIP_SX1262  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+
+heltec_wifi_lora_32_V3.menu.EraseFlash.none=Disabled
+heltec_wifi_lora_32_V3.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wifi_lora_32_V3.menu.EraseFlash.all=Enabled
+heltec_wifi_lora_32_V3.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wireless_stick_V3.name=Wireless Stick(V3)
+heltec_wireless_stick_V3.vid.0=0x303a
+heltec_wireless_stick_V3.pid.0=0x1001
+
+heltec_wireless_stick_V3.bootloader.tool=esptool_py
+heltec_wireless_stick_V3.bootloader.tool.default=esptool_py
+
+heltec_wireless_stick_V3.upload.tool=esptool_py
+heltec_wireless_stick_V3.upload.tool.default=esptool_py
+heltec_wireless_stick_V3.upload.tool.network=esp_ota
+
+heltec_wireless_stick_V3.upload.maximum_size=3342336
+heltec_wireless_stick_V3.upload.maximum_data_size=327680
+heltec_wireless_stick_V3.upload.flags=
+heltec_wireless_stick_V3.upload.extra_flags=
+heltec_wireless_stick_V3.upload.use_1200bps_touch=false
+heltec_wireless_stick_V3.upload.wait_for_upload_port=false
+
+heltec_wireless_stick_V3.serial.disableDTR=false
+heltec_wireless_stick_V3.serial.disableRTS=false
+
+heltec_wireless_stick_V3.build.tarch=xtensa
+heltec_wireless_stick_V3.build.bootloader_addr=0x0
+heltec_wireless_stick_V3.build.target=esp32s3
+heltec_wireless_stick_V3.build.mcu=esp32s3
+heltec_wireless_stick_V3.build.core=esp32
+heltec_wireless_stick_V3.build.variant=heltec_wireless_stick_v3
+heltec_wireless_stick_V3.build.board=HELTEC_WIRELESS_STICK_V3
+
+heltec_wireless_stick_V3.build.usb_mode=1
+heltec_wireless_stick_V3.build.cdc_on_boot=0
+heltec_wireless_stick_V3.build.msc_on_boot=0
+heltec_wireless_stick_V3.build.dfu_on_boot=0
+heltec_wireless_stick_V3.build.f_cpu=240000000L
+heltec_wireless_stick_V3.build.flash_size=8MB
+heltec_wireless_stick_V3.build.flash_freq=80m
+heltec_wireless_stick_V3.build.flash_mode=dio
+heltec_wireless_stick_V3.build.boot=qio
+heltec_wireless_stick_V3.build.boot_freq=80m
+heltec_wireless_stick_V3.build.partitions=default_8MB
+heltec_wireless_stick_V3.build.loop_core=
+heltec_wireless_stick_V3.build.event_core=
+heltec_wireless_stick_V3.build.psram_type=qspi
+heltec_wireless_stick_V3.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_wireless_stick_V3.menu.LoopCore.1=Core 1
+heltec_wireless_stick_V3.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_wireless_stick_V3.menu.LoopCore.0=Core 0
+heltec_wireless_stick_V3.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_wireless_stick_V3.menu.EventsCore.1=Core 1
+heltec_wireless_stick_V3.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_wireless_stick_V3.menu.EventsCore.0=Core 0
+heltec_wireless_stick_V3.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_wireless_stick_V3.menu.CPUFreq.240=240MHz (WiFi)
+heltec_wireless_stick_V3.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wireless_stick_V3.menu.CPUFreq.160=160MHz (WiFi)
+heltec_wireless_stick_V3.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wireless_stick_V3.menu.CPUFreq.80=80MHz (WiFi)
+heltec_wireless_stick_V3.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_wireless_stick_V3.menu.CPUFreq.40=40MHz
+heltec_wireless_stick_V3.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_wireless_stick_V3.menu.CPUFreq.20=20MHz
+heltec_wireless_stick_V3.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_wireless_stick_V3.menu.CPUFreq.10=10MHz
+heltec_wireless_stick_V3.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_wireless_stick_V3.menu.UploadSpeed.921600=921600
+heltec_wireless_stick_V3.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wireless_stick_V3.menu.UploadSpeed.115200=115200
+heltec_wireless_stick_V3.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wireless_stick_V3.menu.UploadSpeed.256000.windows=256000
+heltec_wireless_stick_V3.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wireless_stick_V3.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wireless_stick_V3.menu.UploadSpeed.230400=230400
+heltec_wireless_stick_V3.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wireless_stick_V3.menu.UploadSpeed.460800.linux=460800
+heltec_wireless_stick_V3.menu.UploadSpeed.460800.macosx=460800
+heltec_wireless_stick_V3.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wireless_stick_V3.menu.UploadSpeed.512000.windows=512000
+heltec_wireless_stick_V3.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wireless_stick_V3.menu.DebugLevel.none=None
+heltec_wireless_stick_V3.menu.DebugLevel.none.build.code_debug=0
+heltec_wireless_stick_V3.menu.DebugLevel.error=Error
+heltec_wireless_stick_V3.menu.DebugLevel.error.build.code_debug=1
+heltec_wireless_stick_V3.menu.DebugLevel.warn=Warn
+heltec_wireless_stick_V3.menu.DebugLevel.warn.build.code_debug=2
+heltec_wireless_stick_V3.menu.DebugLevel.info=Info
+heltec_wireless_stick_V3.menu.DebugLevel.info.build.code_debug=3
+heltec_wireless_stick_V3.menu.DebugLevel.debug=Debug
+heltec_wireless_stick_V3.menu.DebugLevel.debug.build.code_debug=4
+heltec_wireless_stick_V3.menu.DebugLevel.verbose=Verbose
+heltec_wireless_stick_V3.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wireless_stick_V3.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wireless_stick_V3.menu.LoRaWanDebugLevel.0=None
+heltec_wireless_stick_V3.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wireless_stick_V3.menu.LoRaWanDebugLevel.1=Freq
+heltec_wireless_stick_V3.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wireless_stick_V3.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wireless_stick_V3.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wireless_stick_V3.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wireless_stick_V3.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_wireless_stick_V3.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wireless_stick_V3.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wireless_stick_V3.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wireless_stick_V3.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wireless_stick_V3.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wireless_stick_V3.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wireless_stick_V3.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wireless_stick_V3.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_wireless_stick_V3.menu.SLOW_CLK_TPYE.0=Internal (default)
+heltec_wireless_stick_V3.menu.SLOW_CLK_TPYE.0.build.SLOW_CLK_TPYE=0
+heltec_wireless_stick_V3.menu.SLOW_CLK_TPYE.1=External 32K
+heltec_wireless_stick_V3.menu.SLOW_CLK_TPYE.1.build.SLOW_CLK_TPYE=1
+
+heltec_wireless_stick_V3.build.defines=-D{build.band} -DMCU_ESP32_S3 -DHELTEC_BOARD=31 -DWIRELESS_STICK_V3 -DSLOW_CLK_TPYE={build.SLOW_CLK_TPYE} -DRADIO_CHIP_SX1262  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+
+heltec_wireless_stick_V3.menu.EraseFlash.none=Disabled
+heltec_wireless_stick_V3.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wireless_stick_V3.menu.EraseFlash.all=Enabled
+heltec_wireless_stick_V3.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wireless_stick_lite_V3.name=Wireless Stick Lite(V3)
+heltec_wireless_stick_lite_V3.vid.0=0x303a
+heltec_wireless_stick_lite_V3.pid.0=0x1001
+
+heltec_wireless_stick_lite_V3.bootloader.tool=esptool_py
+heltec_wireless_stick_lite_V3.bootloader.tool.default=esptool_py
+
+heltec_wireless_stick_lite_V3.upload.tool=esptool_py
+heltec_wireless_stick_lite_V3.upload.tool.default=esptool_py
+heltec_wireless_stick_lite_V3.upload.tool.network=esp_ota
+
+heltec_wireless_stick_lite_V3.upload.maximum_size=3342336
+heltec_wireless_stick_lite_V3.upload.maximum_data_size=327680
+heltec_wireless_stick_lite_V3.upload.flags=
+heltec_wireless_stick_lite_V3.upload.extra_flags=
+heltec_wireless_stick_lite_V3.upload.use_1200bps_touch=false
+heltec_wireless_stick_lite_V3.upload.wait_for_upload_port=false
+
+heltec_wireless_stick_lite_V3.serial.disableDTR=false
+heltec_wireless_stick_lite_V3.serial.disableRTS=false
+
+heltec_wireless_stick_lite_V3.build.tarch=xtensa
+heltec_wireless_stick_lite_V3.build.bootloader_addr=0x0
+heltec_wireless_stick_lite_V3.build.target=esp32s3
+heltec_wireless_stick_lite_V3.build.mcu=esp32s3
+heltec_wireless_stick_lite_V3.build.core=esp32
+heltec_wireless_stick_lite_V3.build.variant=heltec_wireless_stick_lite_v3
+heltec_wireless_stick_lite_V3.build.board=HELTEC_WIRELESS_STICK_LITE_V3
+
+heltec_wireless_stick_lite_V3.build.usb_mode=1
+heltec_wireless_stick_lite_V3.build.cdc_on_boot=0
+heltec_wireless_stick_lite_V3.build.msc_on_boot=0
+heltec_wireless_stick_lite_V3.build.dfu_on_boot=0
+heltec_wireless_stick_lite_V3.build.f_cpu=240000000L
+heltec_wireless_stick_lite_V3.build.flash_size=8MB
+heltec_wireless_stick_lite_V3.build.flash_freq=80m
+heltec_wireless_stick_lite_V3.build.flash_mode=dio
+heltec_wireless_stick_lite_V3.build.boot=qio
+heltec_wireless_stick_lite_V3.build.boot_freq=80m
+heltec_wireless_stick_lite_V3.build.partitions=default_8MB
+heltec_wireless_stick_lite_V3.build.loop_core=
+heltec_wireless_stick_lite_V3.build.event_core=
+heltec_wireless_stick_lite_V3.build.psram_type=qspi
+heltec_wireless_stick_lite_V3.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_wireless_stick_lite_V3.menu.LoopCore.1=Core 1
+heltec_wireless_stick_lite_V3.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_wireless_stick_lite_V3.menu.LoopCore.0=Core 0
+heltec_wireless_stick_lite_V3.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_wireless_stick_lite_V3.menu.EventsCore.1=Core 1
+heltec_wireless_stick_lite_V3.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_wireless_stick_lite_V3.menu.EventsCore.0=Core 0
+heltec_wireless_stick_lite_V3.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_wireless_stick_lite_V3.menu.CPUFreq.240=240MHz (WiFi)
+heltec_wireless_stick_lite_V3.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wireless_stick_lite_V3.menu.CPUFreq.160=160MHz (WiFi)
+heltec_wireless_stick_lite_V3.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wireless_stick_lite_V3.menu.CPUFreq.80=80MHz (WiFi)
+heltec_wireless_stick_lite_V3.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_wireless_stick_lite_V3.menu.CPUFreq.40=40MHz
+heltec_wireless_stick_lite_V3.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_wireless_stick_lite_V3.menu.CPUFreq.20=20MHz
+heltec_wireless_stick_lite_V3.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_wireless_stick_lite_V3.menu.CPUFreq.10=10MHz
+heltec_wireless_stick_lite_V3.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.921600=921600
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.115200=115200
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.256000.windows=256000
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.230400=230400
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.460800.linux=460800
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.460800.macosx=460800
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.512000.windows=512000
+heltec_wireless_stick_lite_V3.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wireless_stick_lite_V3.menu.DebugLevel.none=None
+heltec_wireless_stick_lite_V3.menu.DebugLevel.none.build.code_debug=0
+heltec_wireless_stick_lite_V3.menu.DebugLevel.error=Error
+heltec_wireless_stick_lite_V3.menu.DebugLevel.error.build.code_debug=1
+heltec_wireless_stick_lite_V3.menu.DebugLevel.warn=Warn
+heltec_wireless_stick_lite_V3.menu.DebugLevel.warn.build.code_debug=2
+heltec_wireless_stick_lite_V3.menu.DebugLevel.info=Info
+heltec_wireless_stick_lite_V3.menu.DebugLevel.info.build.code_debug=3
+heltec_wireless_stick_lite_V3.menu.DebugLevel.debug=Debug
+heltec_wireless_stick_lite_V3.menu.DebugLevel.debug.build.code_debug=4
+heltec_wireless_stick_lite_V3.menu.DebugLevel.verbose=Verbose
+heltec_wireless_stick_lite_V3.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wireless_stick_lite_V3.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wireless_stick_lite_V3.menu.LoRaWanDebugLevel.0=None
+heltec_wireless_stick_lite_V3.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wireless_stick_lite_V3.menu.LoRaWanDebugLevel.1=Freq
+heltec_wireless_stick_lite_V3.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wireless_stick_lite_V3.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wireless_stick_lite_V3.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wireless_stick_lite_V3.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wireless_stick_lite_V3.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_wireless_stick_lite_V3.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wireless_stick_lite_V3.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wireless_stick_lite_V3.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wireless_stick_lite_V3.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wireless_stick_lite_V3.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wireless_stick_lite_V3.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wireless_stick_lite_V3.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wireless_stick_lite_V3.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_wireless_stick_lite_V3.menu.SLOW_CLK_TPYE.0=Internal (default)
+heltec_wireless_stick_lite_V3.menu.SLOW_CLK_TPYE.0.build.SLOW_CLK_TPYE=0
+heltec_wireless_stick_lite_V3.menu.SLOW_CLK_TPYE.1=External 32K
+heltec_wireless_stick_lite_V3.menu.SLOW_CLK_TPYE.1.build.SLOW_CLK_TPYE=1
+
+heltec_wireless_stick_lite_V3.build.defines=-D{build.band} -DMCU_ESP32_S3 -DHELTEC_BOARD=32 -DWIRELESS_STICK_LITE_V3 -DSLOW_CLK_TPYE={build.SLOW_CLK_TPYE} -DRADIO_CHIP_SX1262  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+
+heltec_wireless_stick_lite_V3.menu.EraseFlash.none=Disabled
+heltec_wireless_stick_lite_V3.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wireless_stick_lite_V3.menu.EraseFlash.all=Enabled
+heltec_wireless_stick_lite_V3.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wireless_shell_V3.name=Wireless Shell (V3)
+heltec_wireless_shell_V3.vid.0=0x303a
+heltec_wireless_shell_V3.pid.0=0x1001
+
+heltec_wireless_shell_V3.bootloader.tool=esptool_py
+heltec_wireless_shell_V3.bootloader.tool.default=esptool_py
+
+heltec_wireless_shell_V3.upload.tool=esptool_py
+heltec_wireless_shell_V3.upload.tool.default=esptool_py
+heltec_wireless_shell_V3.upload.tool.network=esp_ota
+
+heltec_wireless_shell_V3.upload.maximum_size=3342336
+heltec_wireless_shell_V3.upload.maximum_data_size=327680
+heltec_wireless_shell_V3.upload.flags=
+heltec_wireless_shell_V3.upload.extra_flags=
+heltec_wireless_shell_V3.upload.use_1200bps_touch=false
+heltec_wireless_shell_V3.upload.wait_for_upload_port=false
+
+heltec_wireless_shell_V3.serial.disableDTR=false
+heltec_wireless_shell_V3.serial.disableRTS=false
+
+heltec_wireless_shell_V3.build.tarch=xtensa
+heltec_wireless_shell_V3.build.bootloader_addr=0x0
+heltec_wireless_shell_V3.build.target=esp32s3
+heltec_wireless_shell_V3.build.mcu=esp32s3
+heltec_wireless_shell_V3.build.core=esp32
+heltec_wireless_shell_V3.build.variant=heltec_wireless_shell_v3
+heltec_wireless_shell_V3.build.board=HELTEC_WIRELESS_SHELL_V3
+
+heltec_wireless_shell_V3.build.usb_mode=1
+heltec_wireless_shell_V3.build.cdc_on_boot=0
+heltec_wireless_shell_V3.build.msc_on_boot=0
+heltec_wireless_shell_V3.build.dfu_on_boot=0
+heltec_wireless_shell_V3.build.f_cpu=240000000L
+heltec_wireless_shell_V3.build.flash_size=8MB
+heltec_wireless_shell_V3.build.flash_freq=80m
+heltec_wireless_shell_V3.build.flash_mode=dio
+heltec_wireless_shell_V3.build.boot=qio
+heltec_wireless_shell_V3.build.boot_freq=80m
+heltec_wireless_shell_V3.build.partitions=default_8MB
+heltec_wireless_shell_V3.build.loop_core=
+heltec_wireless_shell_V3.build.event_core=
+heltec_wireless_shell_V3.build.psram_type=qspi
+heltec_wireless_shell_V3.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_wireless_shell_V3.menu.LoopCore.1=Core 1
+heltec_wireless_shell_V3.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_wireless_shell_V3.menu.LoopCore.0=Core 0
+heltec_wireless_shell_V3.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_wireless_shell_V3.menu.EventsCore.1=Core 1
+heltec_wireless_shell_V3.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_wireless_shell_V3.menu.EventsCore.0=Core 0
+heltec_wireless_shell_V3.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_wireless_shell_V3.menu.CPUFreq.240=240MHz (WiFi)
+heltec_wireless_shell_V3.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wireless_shell_V3.menu.CPUFreq.160=160MHz (WiFi)
+heltec_wireless_shell_V3.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wireless_shell_V3.menu.CPUFreq.80=80MHz (WiFi)
+heltec_wireless_shell_V3.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_wireless_shell_V3.menu.CPUFreq.40=40MHz
+heltec_wireless_shell_V3.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_wireless_shell_V3.menu.CPUFreq.20=20MHz
+heltec_wireless_shell_V3.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_wireless_shell_V3.menu.CPUFreq.10=10MHz
+heltec_wireless_shell_V3.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_wireless_shell_V3.menu.UploadSpeed.921600=921600
+heltec_wireless_shell_V3.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wireless_shell_V3.menu.UploadSpeed.115200=115200
+heltec_wireless_shell_V3.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wireless_shell_V3.menu.UploadSpeed.256000.windows=256000
+heltec_wireless_shell_V3.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wireless_shell_V3.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wireless_shell_V3.menu.UploadSpeed.230400=230400
+heltec_wireless_shell_V3.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wireless_shell_V3.menu.UploadSpeed.460800.linux=460800
+heltec_wireless_shell_V3.menu.UploadSpeed.460800.macosx=460800
+heltec_wireless_shell_V3.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wireless_shell_V3.menu.UploadSpeed.512000.windows=512000
+heltec_wireless_shell_V3.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wireless_shell_V3.menu.DebugLevel.none=None
+heltec_wireless_shell_V3.menu.DebugLevel.none.build.code_debug=0
+heltec_wireless_shell_V3.menu.DebugLevel.error=Error
+heltec_wireless_shell_V3.menu.DebugLevel.error.build.code_debug=1
+heltec_wireless_shell_V3.menu.DebugLevel.warn=Warn
+heltec_wireless_shell_V3.menu.DebugLevel.warn.build.code_debug=2
+heltec_wireless_shell_V3.menu.DebugLevel.info=Info
+heltec_wireless_shell_V3.menu.DebugLevel.info.build.code_debug=3
+heltec_wireless_shell_V3.menu.DebugLevel.debug=Debug
+heltec_wireless_shell_V3.menu.DebugLevel.debug.build.code_debug=4
+heltec_wireless_shell_V3.menu.DebugLevel.verbose=Verbose
+heltec_wireless_shell_V3.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wireless_shell_V3.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wireless_shell_V3.menu.LoRaWanDebugLevel.0=None
+heltec_wireless_shell_V3.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wireless_shell_V3.menu.LoRaWanDebugLevel.1=Freq
+heltec_wireless_shell_V3.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wireless_shell_V3.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wireless_shell_V3.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wireless_shell_V3.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wireless_shell_V3.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_wireless_shell_V3.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wireless_shell_V3.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wireless_shell_V3.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wireless_shell_V3.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wireless_shell_V3.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wireless_shell_V3.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wireless_shell_V3.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wireless_shell_V3.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_wireless_shell_V3.menu.SLOW_CLK_TPYE.0=Internal (default)
+heltec_wireless_shell_V3.menu.SLOW_CLK_TPYE.0.build.SLOW_CLK_TPYE=0
+heltec_wireless_shell_V3.menu.SLOW_CLK_TPYE.1=External 32K
+heltec_wireless_shell_V3.menu.SLOW_CLK_TPYE.1.build.SLOW_CLK_TPYE=1
+
+heltec_wireless_shell_V3.build.defines=-D{build.band} -DMCU_ESP32_S3 -DHELTEC_BOARD=33 -DWIRELESS_SHELL_V3 -DSLOW_CLK_TPYE={build.SLOW_CLK_TPYE} -DRADIO_CHIP_SX1262  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+
+heltec_wireless_shell_V3.menu.EraseFlash.none=Disabled
+heltec_wireless_shell_V3.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wireless_shell_V3.menu.EraseFlash.all=Enabled
+heltec_wireless_shell_V3.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_capsule_sensor_V3.name=Capsule Sensor (V3)
+heltec_capsule_sensor_V3.vid.0=0x303a
+heltec_capsule_sensor_V3.pid.0=0x1001
+
+heltec_capsule_sensor_V3.bootloader.tool=esptool_py
+heltec_capsule_sensor_V3.bootloader.tool.default=esptool_py
+
+heltec_capsule_sensor_V3.upload.tool=esptool_py
+heltec_capsule_sensor_V3.upload.tool.default=esptool_py
+heltec_capsule_sensor_V3.upload.tool.network=esp_ota
+
+heltec_capsule_sensor_V3.upload.maximum_size=3342336
+heltec_capsule_sensor_V3.upload.maximum_data_size=327680
+heltec_capsule_sensor_V3.upload.flags=
+heltec_capsule_sensor_V3.upload.extra_flags=
+heltec_capsule_sensor_V3.upload.use_1200bps_touch=false
+heltec_capsule_sensor_V3.upload.wait_for_upload_port=false
+
+heltec_capsule_sensor_V3.serial.disableDTR=false
+heltec_capsule_sensor_V3.serial.disableRTS=false
+
+heltec_capsule_sensor_V3.build.tarch=xtensa
+heltec_capsule_sensor_V3.build.bootloader_addr=0x0
+heltec_capsule_sensor_V3.build.target=esp32s3
+heltec_capsule_sensor_V3.build.mcu=esp32s3
+heltec_capsule_sensor_V3.build.core=esp32
+heltec_capsule_sensor_V3.build.variant=heltec_capsule_sensor_v3
+heltec_capsule_sensor_V3.build.board=HELTEC_CAPSULE_SENSOR_V3
+
+heltec_capsule_sensor_V3.build.usb_mode=1
+heltec_capsule_sensor_V3.build.cdc_on_boot=0
+heltec_capsule_sensor_V3.build.msc_on_boot=0
+heltec_capsule_sensor_V3.build.dfu_on_boot=0
+heltec_capsule_sensor_V3.build.f_cpu=240000000L
+heltec_capsule_sensor_V3.build.flash_size=8MB
+heltec_capsule_sensor_V3.build.flash_freq=80m
+heltec_capsule_sensor_V3.build.flash_mode=dio
+heltec_capsule_sensor_V3.build.boot=qio
+heltec_capsule_sensor_V3.build.boot_freq=80m
+heltec_capsule_sensor_V3.build.partitions=partitions
+heltec_capsule_sensor_V3.build.loop_core=
+heltec_capsule_sensor_V3.build.event_core=
+heltec_capsule_sensor_V3.build.psram_type=qspi
+heltec_capsule_sensor_V3.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_capsule_sensor_V3.menu.LoopCore.1=Core 1
+heltec_capsule_sensor_V3.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_capsule_sensor_V3.menu.LoopCore.0=Core 0
+heltec_capsule_sensor_V3.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_capsule_sensor_V3.menu.EventsCore.1=Core 1
+heltec_capsule_sensor_V3.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_capsule_sensor_V3.menu.EventsCore.0=Core 0
+heltec_capsule_sensor_V3.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_capsule_sensor_V3.menu.CPUFreq.240=240MHz (WiFi)
+heltec_capsule_sensor_V3.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_capsule_sensor_V3.menu.CPUFreq.160=160MHz (WiFi)
+heltec_capsule_sensor_V3.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_capsule_sensor_V3.menu.CPUFreq.80=80MHz (WiFi)
+heltec_capsule_sensor_V3.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_capsule_sensor_V3.menu.CPUFreq.40=40MHz
+heltec_capsule_sensor_V3.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_capsule_sensor_V3.menu.CPUFreq.20=20MHz
+heltec_capsule_sensor_V3.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_capsule_sensor_V3.menu.CPUFreq.10=10MHz
+heltec_capsule_sensor_V3.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_capsule_sensor_V3.menu.UploadSpeed.921600=921600
+heltec_capsule_sensor_V3.menu.UploadSpeed.921600.upload.speed=921600
+heltec_capsule_sensor_V3.menu.UploadSpeed.115200=115200
+heltec_capsule_sensor_V3.menu.UploadSpeed.115200.upload.speed=115200
+heltec_capsule_sensor_V3.menu.UploadSpeed.256000.windows=256000
+heltec_capsule_sensor_V3.menu.UploadSpeed.256000.upload.speed=256000
+heltec_capsule_sensor_V3.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_capsule_sensor_V3.menu.UploadSpeed.230400=230400
+heltec_capsule_sensor_V3.menu.UploadSpeed.230400.upload.speed=230400
+heltec_capsule_sensor_V3.menu.UploadSpeed.460800.linux=460800
+heltec_capsule_sensor_V3.menu.UploadSpeed.460800.macosx=460800
+heltec_capsule_sensor_V3.menu.UploadSpeed.460800.upload.speed=460800
+heltec_capsule_sensor_V3.menu.UploadSpeed.512000.windows=512000
+heltec_capsule_sensor_V3.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_capsule_sensor_V3.menu.DebugLevel.none=None
+heltec_capsule_sensor_V3.menu.DebugLevel.none.build.code_debug=0
+heltec_capsule_sensor_V3.menu.DebugLevel.error=Error
+heltec_capsule_sensor_V3.menu.DebugLevel.error.build.code_debug=1
+heltec_capsule_sensor_V3.menu.DebugLevel.warn=Warn
+heltec_capsule_sensor_V3.menu.DebugLevel.warn.build.code_debug=2
+heltec_capsule_sensor_V3.menu.DebugLevel.info=Info
+heltec_capsule_sensor_V3.menu.DebugLevel.info.build.code_debug=3
+heltec_capsule_sensor_V3.menu.DebugLevel.debug=Debug
+heltec_capsule_sensor_V3.menu.DebugLevel.debug.build.code_debug=4
+heltec_capsule_sensor_V3.menu.DebugLevel.verbose=Verbose
+heltec_capsule_sensor_V3.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.3=REGION_US915
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_capsule_sensor_V3.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_capsule_sensor_V3.menu.LoRaWanDebugLevel.0=None
+heltec_capsule_sensor_V3.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_capsule_sensor_V3.menu.LoRaWanDebugLevel.1=Freq
+heltec_capsule_sensor_V3.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_capsule_sensor_V3.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_capsule_sensor_V3.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_capsule_sensor_V3.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_capsule_sensor_V3.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_capsule_sensor_V3.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_capsule_sensor_V3.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_capsule_sensor_V3.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_capsule_sensor_V3.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_capsule_sensor_V3.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_capsule_sensor_V3.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_capsule_sensor_V3.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_capsule_sensor_V3.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+
+heltec_capsule_sensor_V3.menu.SLOW_CLK_TPYE.0=External 32K (default)
+heltec_capsule_sensor_V3.menu.SLOW_CLK_TPYE.0.build.SLOW_CLK_TPYE=1
+heltec_capsule_sensor_V3.menu.SLOW_CLK_TPYE.1=Internal 
+heltec_capsule_sensor_V3.menu.SLOW_CLK_TPYE.1.build.SLOW_CLK_TPYE=0
+
+heltec_capsule_sensor_V3.menu.NetworkLogLevel.0=NONE
+heltec_capsule_sensor_V3.menu.NetworkLogLevel.0.build.NetworkLogLevel=0
+heltec_capsule_sensor_V3.menu.NetworkLogLevel.1=ERROR
+heltec_capsule_sensor_V3.menu.NetworkLogLevel.1.build.NetworkLogLevel=1
+heltec_capsule_sensor_V3.menu.NetworkLogLevel.2=WARN
+heltec_capsule_sensor_V3.menu.NetworkLogLevel.2.build.NetworkLogLevel=2
+heltec_capsule_sensor_V3.menu.NetworkLogLevel.3=INFO
+heltec_capsule_sensor_V3.menu.NetworkLogLevel.3.build.NetworkLogLevel=3
+
+heltec_capsule_sensor_V3.build.defines=-D{build.band} -DMCU_ESP32_S3 -DHELTEC_BOARD=50 -DCAPSULE_SENSOR_V3 -DSLOW_CLK_TPYE={build.SLOW_CLK_TPYE} -DRADIO_CHIP_SX1262  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board} -DNLOG_LOCAL_LEVEL={build.NetworkLogLevel} 
+
+heltec_capsule_sensor_V3.menu.EraseFlash.none=Disabled
+heltec_capsule_sensor_V3.menu.EraseFlash.none.upload.erase_cmd=
+heltec_capsule_sensor_V3.menu.EraseFlash.all=Enabled
+heltec_capsule_sensor_V3.menu.EraseFlash.all.upload.erase_cmd=-e
+
+#############################################################
+
+heltec_wireless_paper.name=Wireless Paper
+heltec_wireless_paper.vid.0=0x303a
+heltec_wireless_paper.pid.0=0x1001
+
+heltec_wireless_paper.bootloader.tool=esptool_py
+heltec_wireless_paper.bootloader.tool.default=esptool_py
+
+heltec_wireless_paper.upload.tool=esptool_py
+heltec_wireless_paper.upload.tool.default=esptool_py
+heltec_wireless_paper.upload.tool.network=esp_ota
+
+heltec_wireless_paper.upload.maximum_size=4026368
+heltec_wireless_paper.upload.maximum_data_size=327680
+heltec_wireless_paper.upload.flags=
+heltec_wireless_paper.upload.extra_flags=
+heltec_wireless_paper.upload.use_1200bps_touch=false
+heltec_wireless_paper.upload.wait_for_upload_port=false
+
+heltec_wireless_paper.serial.disableDTR=false
+heltec_wireless_paper.serial.disableRTS=false
+
+heltec_wireless_paper.build.tarch=xtensa
+heltec_wireless_paper.build.bootloader_addr=0x0
+heltec_wireless_paper.build.target=esp32s3
+heltec_wireless_paper.build.mcu=esp32s3
+heltec_wireless_paper.build.core=esp32
+heltec_wireless_paper.build.variant=heltec_wireless_paper
+heltec_wireless_paper.build.board=HELTEC_WIRELESS_PAPER
+
+heltec_wireless_paper.build.usb_mode=1
+heltec_wireless_paper.build.cdc_on_boot=0
+heltec_wireless_paper.build.msc_on_boot=0
+heltec_wireless_paper.build.dfu_on_boot=0
+heltec_wireless_paper.build.f_cpu=240000000L
+heltec_wireless_paper.build.flash_size=8MB
+heltec_wireless_paper.build.flash_freq=80m
+heltec_wireless_paper.build.flash_mode=dio
+heltec_wireless_paper.build.boot=qio
+heltec_wireless_paper.build.boot_freq=80m
+heltec_wireless_paper.build.partitions=default_8MB
+heltec_wireless_paper.build.loop_core=
+heltec_wireless_paper.build.event_core=
+heltec_wireless_paper.build.psram_type=qspi
+heltec_wireless_paper.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_wireless_paper.menu.LoopCore.1=Core 1
+heltec_wireless_paper.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_wireless_paper.menu.LoopCore.0=Core 0
+heltec_wireless_paper.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_wireless_paper.menu.EventsCore.1=Core 1
+heltec_wireless_paper.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_wireless_paper.menu.EventsCore.0=Core 0
+heltec_wireless_paper.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_wireless_paper.menu.CPUFreq.240=240MHz (WiFi)
+heltec_wireless_paper.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wireless_paper.menu.CPUFreq.160=160MHz (WiFi)
+heltec_wireless_paper.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wireless_paper.menu.CPUFreq.80=80MHz (WiFi)
+heltec_wireless_paper.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_wireless_paper.menu.CPUFreq.40=40MHz
+heltec_wireless_paper.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_wireless_paper.menu.CPUFreq.20=20MHz
+heltec_wireless_paper.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_wireless_paper.menu.CPUFreq.10=10MHz
+heltec_wireless_paper.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_wireless_paper.menu.UploadSpeed.921600=921600
+heltec_wireless_paper.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wireless_paper.menu.UploadSpeed.115200=115200
+heltec_wireless_paper.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wireless_paper.menu.UploadSpeed.256000.windows=256000
+heltec_wireless_paper.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wireless_paper.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wireless_paper.menu.UploadSpeed.230400=230400
+heltec_wireless_paper.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wireless_paper.menu.UploadSpeed.460800.linux=460800
+heltec_wireless_paper.menu.UploadSpeed.460800.macosx=460800
+heltec_wireless_paper.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wireless_paper.menu.UploadSpeed.512000.windows=512000
+heltec_wireless_paper.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wireless_paper.menu.DebugLevel.none=None
+heltec_wireless_paper.menu.DebugLevel.none.build.code_debug=0
+heltec_wireless_paper.menu.DebugLevel.error=Error
+heltec_wireless_paper.menu.DebugLevel.error.build.code_debug=1
+heltec_wireless_paper.menu.DebugLevel.warn=Warn
+heltec_wireless_paper.menu.DebugLevel.warn.build.code_debug=2
+heltec_wireless_paper.menu.DebugLevel.info=Info
+heltec_wireless_paper.menu.DebugLevel.info.build.code_debug=3
+heltec_wireless_paper.menu.DebugLevel.debug=Debug
+heltec_wireless_paper.menu.DebugLevel.debug.build.code_debug=4
+heltec_wireless_paper.menu.DebugLevel.verbose=Verbose
+heltec_wireless_paper.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wireless_paper.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wireless_paper.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wireless_paper.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wireless_paper.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wireless_paper.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wireless_paper.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wireless_paper.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wireless_paper.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wireless_paper.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wireless_paper.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wireless_paper.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wireless_paper.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wireless_paper.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wireless_paper.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wireless_paper.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wireless_paper.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wireless_paper.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wireless_paper.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wireless_paper.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wireless_paper.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wireless_paper.menu.LoRaWanDebugLevel.0=None
+heltec_wireless_paper.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wireless_paper.menu.LoRaWanDebugLevel.1=Freq
+heltec_wireless_paper.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wireless_paper.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wireless_paper.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wireless_paper.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wireless_paper.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_wireless_paper.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wireless_paper.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wireless_paper.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wireless_paper.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wireless_paper.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wireless_paper.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wireless_paper.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wireless_paper.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_wireless_paper.menu.SLOW_CLK_TPYE.0=Internal (default)
+heltec_wireless_paper.menu.SLOW_CLK_TPYE.0.build.SLOW_CLK_TPYE=0
+heltec_wireless_paper.menu.SLOW_CLK_TPYE.1=External 32K
+heltec_wireless_paper.menu.SLOW_CLK_TPYE.1.build.SLOW_CLK_TPYE=1
+
+heltec_wireless_paper.build.defines=-D{build.band}  -DMCU_ESP32_S3 -DHELTEC_BOARD=60 -DWIRELESS_PAPER -DSLOW_CLK_TPYE={build.SLOW_CLK_TPYE} -DRADIO_CHIP_SX1262  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+
+heltec_wireless_paper.menu.EraseFlash.none=Disabled
+heltec_wireless_paper.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wireless_paper.menu.EraseFlash.all=Enabled
+heltec_wireless_paper.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wireless_tracker.name=Wireless Tracker
+heltec_wireless_tracker.vid.0=0x303a
+heltec_wireless_tracker.pid.0=0x1001
+
+heltec_wireless_tracker.bootloader.tool=esptool_py
+heltec_wireless_tracker.bootloader.tool.default=esptool_py
+
+heltec_wireless_tracker.upload.tool=esptool_py
+heltec_wireless_tracker.upload.tool.default=esptool_py
+heltec_wireless_tracker.upload.tool.network=esp_ota
+
+heltec_wireless_tracker.upload.maximum_size=3342336
+heltec_wireless_tracker.upload.maximum_data_size=327680
+heltec_wireless_tracker.upload.flags=
+heltec_wireless_tracker.upload.extra_flags=
+heltec_wireless_tracker.upload.use_1200bps_touch=false
+heltec_wireless_tracker.upload.wait_for_upload_port=false
+
+heltec_wireless_tracker.serial.disableDTR=false
+heltec_wireless_tracker.serial.disableRTS=false
+
+heltec_wireless_tracker.build.tarch=xtensa
+heltec_wireless_tracker.build.bootloader_addr=0x0
+heltec_wireless_tracker.build.target=esp32s3
+heltec_wireless_tracker.build.mcu=esp32s3
+heltec_wireless_tracker.build.core=esp32
+heltec_wireless_tracker.build.variant=heltec_wireless_tracker
+heltec_wireless_tracker.build.board=HELTEC_WIRELESS_TRACKER
+
+heltec_wireless_tracker.build.usb_mode=1
+heltec_wireless_tracker.build.cdc_on_boot=0
+heltec_wireless_tracker.build.msc_on_boot=0
+heltec_wireless_tracker.build.dfu_on_boot=0
+heltec_wireless_tracker.build.f_cpu=240000000L
+heltec_wireless_tracker.build.flash_size=8MB
+heltec_wireless_tracker.build.flash_freq=80m
+heltec_wireless_tracker.build.flash_mode=dio
+heltec_wireless_tracker.build.boot=qio
+heltec_wireless_tracker.build.boot_freq=80m
+heltec_wireless_tracker.build.partitions=default_8MB
+heltec_wireless_tracker.build.loop_core=
+heltec_wireless_tracker.build.event_core=
+heltec_wireless_tracker.build.psram_type=qspi
+heltec_wireless_tracker.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_wireless_tracker.menu.LoopCore.1=Core 1
+heltec_wireless_tracker.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_wireless_tracker.menu.LoopCore.0=Core 0
+heltec_wireless_tracker.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_wireless_tracker.menu.EventsCore.1=Core 1
+heltec_wireless_tracker.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_wireless_tracker.menu.EventsCore.0=Core 0
+heltec_wireless_tracker.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_wireless_tracker.menu.USBMode.hwcdc=Hardware CDC and JTAG
+heltec_wireless_tracker.menu.USBMode.hwcdc.build.usb_mode=1
+heltec_wireless_tracker.menu.USBMode.default=USB-OTG (TinyUSB)
+heltec_wireless_tracker.menu.USBMode.default.build.usb_mode=0
+
+heltec_wireless_tracker.menu.CDCOnBoot.default=Enabled
+heltec_wireless_tracker.menu.CDCOnBoot.default.build.cdc_on_boot=1
+heltec_wireless_tracker.menu.CDCOnBoot.cdc=Disabled
+heltec_wireless_tracker.menu.CDCOnBoot.cdc.build.cdc_on_boot=0
+
+heltec_wireless_tracker.menu.MSCOnBoot.default=Disabled
+heltec_wireless_tracker.menu.MSCOnBoot.default.build.msc_on_boot=0
+heltec_wireless_tracker.menu.MSCOnBoot.msc=Enabled (Requires USB-OTG Mode)
+heltec_wireless_tracker.menu.MSCOnBoot.msc.build.msc_on_boot=1
+
+heltec_wireless_tracker.menu.DFUOnBoot.default=Disabled
+heltec_wireless_tracker.menu.DFUOnBoot.default.build.dfu_on_boot=0
+heltec_wireless_tracker.menu.DFUOnBoot.dfu=Enabled (Requires USB-OTG Mode)
+heltec_wireless_tracker.menu.DFUOnBoot.dfu.build.dfu_on_boot=1
+
+heltec_wireless_tracker.menu.UploadMode.default=UART0 / Hardware CDC
+heltec_wireless_tracker.menu.UploadMode.default.upload.use_1200bps_touch=false
+heltec_wireless_tracker.menu.UploadMode.default.upload.wait_for_upload_port=false
+heltec_wireless_tracker.menu.UploadMode.cdc=USB-OTG CDC (TinyUSB)
+heltec_wireless_tracker.menu.UploadMode.cdc.upload.use_1200bps_touch=true
+heltec_wireless_tracker.menu.UploadMode.cdc.upload.wait_for_upload_port=true
+
+heltec_wireless_tracker.menu.CPUFreq.240=240MHz (WiFi)
+heltec_wireless_tracker.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wireless_tracker.menu.CPUFreq.160=160MHz (WiFi)
+heltec_wireless_tracker.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wireless_tracker.menu.CPUFreq.80=80MHz (WiFi)
+heltec_wireless_tracker.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_wireless_tracker.menu.CPUFreq.40=40MHz
+heltec_wireless_tracker.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_wireless_tracker.menu.CPUFreq.20=20MHz
+heltec_wireless_tracker.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_wireless_tracker.menu.CPUFreq.10=10MHz
+heltec_wireless_tracker.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_wireless_tracker.menu.UploadSpeed.921600=921600
+heltec_wireless_tracker.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wireless_tracker.menu.UploadSpeed.115200=115200
+heltec_wireless_tracker.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wireless_tracker.menu.UploadSpeed.256000.windows=256000
+heltec_wireless_tracker.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wireless_tracker.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wireless_tracker.menu.UploadSpeed.230400=230400
+heltec_wireless_tracker.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wireless_tracker.menu.UploadSpeed.460800.linux=460800
+heltec_wireless_tracker.menu.UploadSpeed.460800.macosx=460800
+heltec_wireless_tracker.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wireless_tracker.menu.UploadSpeed.512000.windows=512000
+heltec_wireless_tracker.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wireless_tracker.menu.DebugLevel.none=None
+heltec_wireless_tracker.menu.DebugLevel.none.build.code_debug=0
+heltec_wireless_tracker.menu.DebugLevel.error=Error
+heltec_wireless_tracker.menu.DebugLevel.error.build.code_debug=1
+heltec_wireless_tracker.menu.DebugLevel.warn=Warn
+heltec_wireless_tracker.menu.DebugLevel.warn.build.code_debug=2
+heltec_wireless_tracker.menu.DebugLevel.info=Info
+heltec_wireless_tracker.menu.DebugLevel.info.build.code_debug=3
+heltec_wireless_tracker.menu.DebugLevel.debug=Debug
+heltec_wireless_tracker.menu.DebugLevel.debug.build.code_debug=4
+heltec_wireless_tracker.menu.DebugLevel.verbose=Verbose
+heltec_wireless_tracker.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wireless_tracker.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wireless_tracker.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wireless_tracker.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wireless_tracker.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wireless_tracker.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wireless_tracker.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wireless_tracker.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wireless_tracker.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wireless_tracker.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wireless_tracker.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wireless_tracker.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wireless_tracker.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wireless_tracker.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wireless_tracker.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wireless_tracker.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wireless_tracker.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wireless_tracker.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wireless_tracker.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wireless_tracker.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wireless_tracker.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wireless_tracker.menu.LoRaWanDebugLevel.0=None
+heltec_wireless_tracker.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wireless_tracker.menu.LoRaWanDebugLevel.1=Freq
+heltec_wireless_tracker.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wireless_tracker.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wireless_tracker.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wireless_tracker.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wireless_tracker.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_wireless_tracker.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wireless_tracker.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wireless_tracker.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wireless_tracker.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wireless_tracker.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wireless_tracker.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wireless_tracker.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wireless_tracker.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_wireless_tracker.menu.SLOW_CLK_TPYE.0=Internal (default)
+heltec_wireless_tracker.menu.SLOW_CLK_TPYE.0.build.SLOW_CLK_TPYE=0
+heltec_wireless_tracker.menu.SLOW_CLK_TPYE.1=External 32K
+heltec_wireless_tracker.menu.SLOW_CLK_TPYE.1.build.SLOW_CLK_TPYE=1
+
+heltec_wireless_tracker.build.defines=-D{build.band}  -DMCU_ESP32_S3 -DHELTEC_BOARD=34 -DWIRELESS_TRACKER -DSLOW_CLK_TPYE={build.SLOW_CLK_TPYE} -DRADIO_CHIP_SX1262  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+
+heltec_wireless_tracker.menu.EraseFlash.none=Disabled
+heltec_wireless_tracker.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wireless_tracker.menu.EraseFlash.all=Enabled
+heltec_wireless_tracker.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wireless_mini_shell.name=Wireless Mini Shell
+heltec_wireless_mini_shell.vid.0=0x303a
+heltec_wireless_mini_shell.pid.0=0x1001
+
+heltec_wireless_mini_shell.bootloader.tool=esptool_py
+heltec_wireless_mini_shell.bootloader.tool.default=esptool_py
+
+heltec_wireless_mini_shell.upload.tool=esptool_py
+heltec_wireless_mini_shell.upload.tool.default=esptool_py
+heltec_wireless_mini_shell.upload.tool.network=esp_ota
+
+heltec_wireless_mini_shell.upload.maximum_size=1310720
+heltec_wireless_mini_shell.upload.maximum_data_size=327680
+heltec_wireless_mini_shell.upload.flags=
+heltec_wireless_mini_shell.upload.extra_flags=
+heltec_wireless_mini_shell.upload.use_1200bps_touch=false
+heltec_wireless_mini_shell.upload.wait_for_upload_port=false
+
+heltec_wireless_mini_shell.serial.disableDTR=false
+heltec_wireless_mini_shell.serial.disableRTS=false
+
+heltec_wireless_mini_shell.build.tarch=riscv32
+heltec_wireless_mini_shell.build.target=esp
+heltec_wireless_mini_shell.build.mcu=esp32c3
+heltec_wireless_mini_shell.build.core=esp32
+heltec_wireless_mini_shell.build.variant=heltec_wireless_mini_shell
+heltec_wireless_mini_shell.build.board=HELTEC_WIRELESS_MINI_SHELL
+heltec_wireless_mini_shell.build.bootloader_addr=0x0
+
+heltec_wireless_mini_shell.build.cdc_on_boot=0
+heltec_wireless_mini_shell.build.f_cpu=160000000L
+heltec_wireless_mini_shell.build.flash_size=4MB
+heltec_wireless_mini_shell.build.flash_freq=80m
+heltec_wireless_mini_shell.build.flash_mode=dio
+heltec_wireless_mini_shell.build.boot=qio
+heltec_wireless_mini_shell.build.partitions=default
+
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wireless_mini_shell.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wireless_mini_shell.menu.CPUFreq.160=160MHz (WiFi)
+heltec_wireless_mini_shell.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wireless_mini_shell.menu.CPUFreq.80=80MHz (WiFi)
+heltec_wireless_mini_shell.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_wireless_mini_shell.menu.CPUFreq.40=40MHz
+heltec_wireless_mini_shell.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_wireless_mini_shell.menu.CPUFreq.20=20MHz
+heltec_wireless_mini_shell.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_wireless_mini_shell.menu.CPUFreq.10=10MHz
+heltec_wireless_mini_shell.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_wireless_mini_shell.menu.UploadSpeed.921600=921600
+heltec_wireless_mini_shell.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wireless_mini_shell.menu.UploadSpeed.115200=115200
+heltec_wireless_mini_shell.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wireless_mini_shell.menu.UploadSpeed.256000.windows=256000
+heltec_wireless_mini_shell.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wireless_mini_shell.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wireless_mini_shell.menu.UploadSpeed.230400=230400
+heltec_wireless_mini_shell.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wireless_mini_shell.menu.UploadSpeed.460800.linux=460800
+heltec_wireless_mini_shell.menu.UploadSpeed.460800.macosx=460800
+heltec_wireless_mini_shell.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wireless_mini_shell.menu.UploadSpeed.512000.windows=512000
+heltec_wireless_mini_shell.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wireless_mini_shell.menu.DebugLevel.none=None
+heltec_wireless_mini_shell.menu.DebugLevel.none.build.code_debug=0
+heltec_wireless_mini_shell.menu.DebugLevel.error=Error
+heltec_wireless_mini_shell.menu.DebugLevel.error.build.code_debug=1
+heltec_wireless_mini_shell.menu.DebugLevel.warn=Warn
+heltec_wireless_mini_shell.menu.DebugLevel.warn.build.code_debug=2
+heltec_wireless_mini_shell.menu.DebugLevel.info=Info
+heltec_wireless_mini_shell.menu.DebugLevel.info.build.code_debug=3
+heltec_wireless_mini_shell.menu.DebugLevel.debug=Debug
+heltec_wireless_mini_shell.menu.DebugLevel.debug.build.code_debug=4
+heltec_wireless_mini_shell.menu.DebugLevel.verbose=Verbose
+heltec_wireless_mini_shell.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wireless_mini_shell.menu.LoRaWanDebugLevel.0=None
+heltec_wireless_mini_shell.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wireless_mini_shell.menu.LoRaWanDebugLevel.1=Freq
+heltec_wireless_mini_shell.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wireless_mini_shell.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wireless_mini_shell.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wireless_mini_shell.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wireless_mini_shell.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+
+heltec_wireless_mini_shell.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wireless_mini_shell.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wireless_mini_shell.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wireless_mini_shell.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wireless_mini_shell.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wireless_mini_shell.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wireless_mini_shell.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wireless_mini_shell.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_wireless_mini_shell.build.defines=-D{build.band}  -DMCU_ESP32_C3 -DHELTEC_BOARD=70 -DWIRELESS_MINI_SHELL -DSLOW_CLK_TPYE=0 -DRADIO_CHIP_SX1262  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+heltec_wireless_mini_shell.menu.EraseFlash.none=Disabled
+heltec_wireless_mini_shell.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wireless_mini_shell.menu.EraseFlash.all=Enabled
+heltec_wireless_mini_shell.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wireless_stick.name=Wireless Stick
+
+heltec_wireless_stick.bootloader.tool=esptool_py
+heltec_wireless_stick.bootloader.tool.default=esptool_py
+
+heltec_wireless_stick.upload.tool=esptool_py
+heltec_wireless_stick.upload.tool.default=esptool_py
+heltec_wireless_stick.upload.tool.network=esp_ota
+
+heltec_wireless_stick.upload.maximum_size=3342336
+heltec_wireless_stick.upload.maximum_data_size=327680
+heltec_wireless_stick.upload.flags=
+heltec_wireless_stick.upload.extra_flags=
+
+heltec_wireless_stick.serial.disableDTR=true
+heltec_wireless_stick.serial.disableRTS=true
+
+heltec_wireless_stick.build.tarch=xtensa
+heltec_wireless_stick.build.bootloader_addr=0x1000
+heltec_wireless_stick.build.target=esp32
+heltec_wireless_stick.build.mcu=esp32
+heltec_wireless_stick.build.core=esp32
+heltec_wireless_stick.build.variant=heltec_wireless_stick
+heltec_wireless_stick.build.board=HELTEC_WIRELESS_STICK
+
+heltec_wireless_stick.build.f_cpu=240000000L
+heltec_wireless_stick.build.flash_size=8MB
+heltec_wireless_stick.build.flash_freq=80m
+heltec_wireless_stick.build.flash_mode=dio
+heltec_wireless_stick.build.boot=dio
+heltec_wireless_stick.build.partitions=default_8MB
+heltec_wireless_stick.build.build.psram=
+heltec_wireless_stick.build.defines=-D{build.band}  -DMCU_ESP32_D0 -DHELTEC_BOARD=2 -DWIRELESS_STICK -DSLOW_CLK_TPYE=0 -DRADIO_CHIP_SX127X  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+
+heltec_wireless_stick.menu.CPUFreq.240=240MHz (WiFi/BT)
+heltec_wireless_stick.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wireless_stick.menu.CPUFreq.160=160MHz (WiFi/BT)
+heltec_wireless_stick.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wireless_stick.menu.CPUFreq.80=80MHz (WiFi/BT)
+heltec_wireless_stick.menu.CPUFreq.80.build.f_cpu=80000000L
+
+heltec_wireless_stick.menu.UploadSpeed.921600=921600
+heltec_wireless_stick.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wireless_stick.menu.UploadSpeed.115200=115200
+heltec_wireless_stick.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wireless_stick.menu.UploadSpeed.256000.windows=256000
+heltec_wireless_stick.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wireless_stick.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wireless_stick.menu.UploadSpeed.230400=230400
+heltec_wireless_stick.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wireless_stick.menu.UploadSpeed.460800.linux=460800
+heltec_wireless_stick.menu.UploadSpeed.460800.macosx=460800
+heltec_wireless_stick.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wireless_stick.menu.UploadSpeed.512000.windows=512000
+heltec_wireless_stick.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wireless_stick.menu.DebugLevel.none=None
+heltec_wireless_stick.menu.DebugLevel.none.build.code_debug=0
+heltec_wireless_stick.menu.DebugLevel.error=Error
+heltec_wireless_stick.menu.DebugLevel.error.build.code_debug=1
+heltec_wireless_stick.menu.DebugLevel.warn=Warn
+heltec_wireless_stick.menu.DebugLevel.warn.build.code_debug=2
+heltec_wireless_stick.menu.DebugLevel.info=Info
+heltec_wireless_stick.menu.DebugLevel.info.build.code_debug=3
+heltec_wireless_stick.menu.DebugLevel.debug=Debug
+heltec_wireless_stick.menu.DebugLevel.debug.build.code_debug=4
+heltec_wireless_stick.menu.DebugLevel.verbose=Verbose
+heltec_wireless_stick.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wireless_stick.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wireless_stick.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wireless_stick.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wireless_stick.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wireless_stick.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wireless_stick.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wireless_stick.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wireless_stick.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wireless_stick.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wireless_stick.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wireless_stick.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wireless_stick.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wireless_stick.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wireless_stick.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wireless_stick.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wireless_stick.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wireless_stick.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wireless_stick.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wireless_stick.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wireless_stick.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wireless_stick.menu.LoRaWanDebugLevel.0=None
+heltec_wireless_stick.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wireless_stick.menu.LoRaWanDebugLevel.1=Freq
+heltec_wireless_stick.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wireless_stick.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wireless_stick.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wireless_stick.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wireless_stick.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_wireless_stick.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wireless_stick.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wireless_stick.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wireless_stick.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wireless_stick.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wireless_stick.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wireless_stick.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wireless_stick.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_wireless_stick.menu.EraseFlash.none=Disabled
+heltec_wireless_stick.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wireless_stick.menu.EraseFlash.all=Enabled
+heltec_wireless_stick.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wireless_stick_lite.name=Wireless Stick Lite / Wireless Shell
+
+heltec_wireless_stick_lite.bootloader.tool=esptool_py
+heltec_wireless_stick_lite.bootloader.tool.default=esptool_py
+
+heltec_wireless_stick_lite.upload.tool=esptool_py
+heltec_wireless_stick_lite.upload.tool.default=esptool_py
+heltec_wireless_stick_lite.upload.tool.network=esp_ota
+
+heltec_wireless_stick_lite.upload.maximum_size=1310720
+heltec_wireless_stick_lite.upload.maximum_data_size=327680
+heltec_wireless_stick_lite.upload.flags=
+heltec_wireless_stick_lite.upload.extra_flags=
+
+heltec_wireless_stick_lite.serial.disableDTR=true
+heltec_wireless_stick_lite.serial.disableRTS=true
+
+heltec_wireless_stick_lite.build.tarch=xtensa
+heltec_wireless_stick_lite.build.bootloader_addr=0x1000
+heltec_wireless_stick_lite.build.target=esp32
+heltec_wireless_stick_lite.build.mcu=esp32
+heltec_wireless_stick_lite.build.core=esp32
+heltec_wireless_stick_lite.build.variant=heltec_wireless_stick_lite
+heltec_wireless_stick_lite.build.board=HELTEC_WIRELESS_STICK_LITE
+
+heltec_wireless_stick_lite.build.f_cpu=240000000L
+heltec_wireless_stick_lite.build.flash_size=4MB
+heltec_wireless_stick_lite.build.flash_freq=80m
+heltec_wireless_stick_lite.build.flash_mode=dio
+heltec_wireless_stick_lite.build.boot=dio
+heltec_wireless_stick_lite.build.partitions=default
+heltec_wireless_stick_lite.build.psram=
+heltec_wireless_stick_lite.build.defines=-D{build.band}  -DMCU_ESP32_D0 -DHELTEC_BOARD=3 -DWIRELESS_STICK_LITE -DSLOW_CLK_TPYE=0 -DRADIO_CHIP_SX127X -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+
+heltec_wireless_stick_lite.menu.CPUFreq.240=240MHz (WiFi/BT)
+heltec_wireless_stick_lite.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wireless_stick_lite.menu.CPUFreq.160=160MHz (WiFi/BT)
+heltec_wireless_stick_lite.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wireless_stick_lite.menu.CPUFreq.80=80MHz (WiFi/BT)
+heltec_wireless_stick_lite.menu.CPUFreq.80.build.f_cpu=80000000L
+
+heltec_wireless_stick_lite.menu.UploadSpeed.921600=921600
+heltec_wireless_stick_lite.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wireless_stick_lite.menu.UploadSpeed.115200=115200
+heltec_wireless_stick_lite.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wireless_stick_lite.menu.UploadSpeed.256000.windows=256000
+heltec_wireless_stick_lite.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wireless_stick_lite.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wireless_stick_lite.menu.UploadSpeed.230400=230400
+heltec_wireless_stick_lite.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wireless_stick_lite.menu.UploadSpeed.460800.linux=460800
+heltec_wireless_stick_lite.menu.UploadSpeed.460800.macosx=460800
+heltec_wireless_stick_lite.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wireless_stick_lite.menu.UploadSpeed.512000.windows=512000
+heltec_wireless_stick_lite.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_wireless_stick_lite.menu.DebugLevel.none=None
+heltec_wireless_stick_lite.menu.DebugLevel.none.build.code_debug=0
+heltec_wireless_stick_lite.menu.DebugLevel.error=Error
+heltec_wireless_stick_lite.menu.DebugLevel.error.build.code_debug=1
+heltec_wireless_stick_lite.menu.DebugLevel.warn=Warn
+heltec_wireless_stick_lite.menu.DebugLevel.warn.build.code_debug=2
+heltec_wireless_stick_lite.menu.DebugLevel.info=Info
+heltec_wireless_stick_lite.menu.DebugLevel.info.build.code_debug=3
+heltec_wireless_stick_lite.menu.DebugLevel.debug=Debug
+heltec_wireless_stick_lite.menu.DebugLevel.debug.build.code_debug=4
+heltec_wireless_stick_lite.menu.DebugLevel.verbose=Verbose
+heltec_wireless_stick_lite.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wireless_stick_lite.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wireless_stick_lite.menu.LoRaWanDebugLevel.0=None
+heltec_wireless_stick_lite.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wireless_stick_lite.menu.LoRaWanDebugLevel.1=Freq
+heltec_wireless_stick_lite.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wireless_stick_lite.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wireless_stick_lite.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wireless_stick_lite.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wireless_stick_lite.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_wireless_stick_lite.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wireless_stick_lite.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wireless_stick_lite.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wireless_stick_lite.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wireless_stick_lite.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wireless_stick_lite.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wireless_stick_lite.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wireless_stick_lite.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_wireless_stick_lite.menu.EraseFlash.none=Disabled
+heltec_wireless_stick_lite.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wireless_stick_lite.menu.EraseFlash.all=Enabled
+heltec_wireless_stick_lite.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_wireless_bridge.name=Wireless Bridge
+
+heltec_wireless_bridge.bootloader.tool=esptool_py
+heltec_wireless_bridge.bootloader.tool.default=esptool_py
+
+heltec_wireless_bridge.upload.tool=esptool_py
+heltec_wireless_bridge.upload.tool.default=esptool_py
+heltec_wireless_bridge.upload.tool.network=esp_ota
+
+heltec_wireless_bridge.upload.maximum_size=3342336
+heltec_wireless_bridge.upload.maximum_data_size=327680
+heltec_wireless_bridge.upload.wait_for_upload_port=true
+heltec_wireless_bridge.upload.flags=
+heltec_wireless_bridge.upload.extra_flags=
+
+heltec_wireless_bridge.serial.disableDTR=true
+heltec_wireless_bridge.serial.disableRTS=true
+
+heltec_wireless_bridge.build.tarch=xtensa
+heltec_wireless_bridge.build.bootloader_addr=0x1000
+heltec_wireless_bridge.build.target=esp32
+heltec_wireless_bridge.build.mcu=esp32
+heltec_wireless_bridge.build.core=esp32
+heltec_wireless_bridge.build.variant=heltec_wireless_bridge
+heltec_wireless_bridge.build.board=HELTEC_WIRELESS_BRIDGE
+
+heltec_wireless_bridge.build.f_cpu=240000000L
+heltec_wireless_bridge.build.flash_size=8MB
+heltec_wireless_bridge.build.flash_freq=80m
+heltec_wireless_bridge.build.flash_mode=dio
+heltec_wireless_bridge.build.boot=dio
+heltec_wireless_bridge.build.partitions=default_8MB
+heltec_wireless_bridge.build.psram=
+heltec_wireless_bridge.build.psram_type=qspi
+heltec_wireless_bridge.build.memory_type={build.boot}_{build.psram_type}
+heltec_wireless_bridge.build.defines=-D{build.band} {build.psram_val} -DMCU_ESP32_D0 -DWIRELESS_BRIDGE -DHELTEC_BOARD=4 -DRADIO_CHIP_SX127X -DSLOW_CLK_TPYE=0 -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH}  -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO}  {build.psram}
+
+heltec_wireless_bridge.menu.CPUFreq.240=240MHz (WiFi/BT)
+heltec_wireless_bridge.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_wireless_bridge.menu.CPUFreq.160=160MHz (WiFi/BT)
+heltec_wireless_bridge.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_wireless_bridge.menu.CPUFreq.80=80MHz (WiFi/BT)
+heltec_wireless_bridge.menu.CPUFreq.80.build.f_cpu=80000000L
+
+heltec_wireless_bridge.menu.UploadSpeed.921600=921600
+heltec_wireless_bridge.menu.UploadSpeed.921600.upload.speed=921600
+heltec_wireless_bridge.menu.UploadSpeed.115200=115200
+heltec_wireless_bridge.menu.UploadSpeed.115200.upload.speed=115200
+heltec_wireless_bridge.menu.UploadSpeed.256000.windows=256000
+heltec_wireless_bridge.menu.UploadSpeed.256000.upload.speed=256000
+heltec_wireless_bridge.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_wireless_bridge.menu.UploadSpeed.230400=230400
+heltec_wireless_bridge.menu.UploadSpeed.230400.upload.speed=230400
+heltec_wireless_bridge.menu.UploadSpeed.460800.linux=460800
+heltec_wireless_bridge.menu.UploadSpeed.460800.macosx=460800
+heltec_wireless_bridge.menu.UploadSpeed.460800.upload.speed=460800
+heltec_wireless_bridge.menu.UploadSpeed.512000.windows=512000
+heltec_wireless_bridge.menu.UploadSpeed.512000.upload.speed=512000
+
+
+heltec_wireless_bridge.menu.PSRAM.disabled=Disabled
+heltec_wireless_bridge.menu.PSRAM.disabled.build.psram_val=
+heltec_wireless_bridge.menu.PSRAM.disabled.build.psram_type=qspi
+heltec_wireless_bridge.menu.PSRAM.enabled=QSPI PSRAM
+heltec_wireless_bridge.menu.PSRAM.enabled.build.psram_val=-DBOARD_HAS_PSRAM
+heltec_wireless_bridge.menu.PSRAM.enabled.build.psram_type=qspi
+
+heltec_wireless_bridge.menu.DebugLevel.none=None
+heltec_wireless_bridge.menu.DebugLevel.none.build.code_debug=0
+heltec_wireless_bridge.menu.DebugLevel.error=Error
+heltec_wireless_bridge.menu.DebugLevel.error.build.code_debug=1
+heltec_wireless_bridge.menu.DebugLevel.warn=Warn
+heltec_wireless_bridge.menu.DebugLevel.warn.build.code_debug=2
+heltec_wireless_bridge.menu.DebugLevel.info=Info
+heltec_wireless_bridge.menu.DebugLevel.info.build.code_debug=3
+heltec_wireless_bridge.menu.DebugLevel.debug=Debug
+heltec_wireless_bridge.menu.DebugLevel.debug.build.code_debug=4
+heltec_wireless_bridge.menu.DebugLevel.verbose=Verbose
+heltec_wireless_bridge.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_wireless_bridge.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_wireless_bridge.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_wireless_bridge.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_wireless_bridge.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_wireless_bridge.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_wireless_bridge.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_wireless_bridge.menu.LORAWAN_REGION.3=REGION_US915
+heltec_wireless_bridge.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_wireless_bridge.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_wireless_bridge.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_wireless_bridge.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_wireless_bridge.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_wireless_bridge.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_wireless_bridge.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_wireless_bridge.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_wireless_bridge.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_wireless_bridge.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_wireless_bridge.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_wireless_bridge.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_wireless_bridge.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_wireless_bridge.menu.LoRaWanDebugLevel.0=None
+heltec_wireless_bridge.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_wireless_bridge.menu.LoRaWanDebugLevel.1=Freq
+heltec_wireless_bridge.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_wireless_bridge.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_wireless_bridge.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_wireless_bridge.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_wireless_bridge.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_wireless_bridge.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_wireless_bridge.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_wireless_bridge.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_wireless_bridge.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_wireless_bridge.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_wireless_bridge.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_wireless_bridge.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_wireless_bridge.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_wireless_bridge.menu.EraseFlash.none=Disabled
+heltec_wireless_bridge.menu.EraseFlash.none.upload.erase_cmd=
+heltec_wireless_bridge.menu.EraseFlash.all=Enabled
+heltec_wireless_bridge.menu.EraseFlash.all.upload.erase_cmd=-e
+
+#############################################################
+
+heltec_ht_de01.name=E-Ink Driver
+heltec_ht_de01.vid.0=0x303a
+heltec_ht_de01.pid.0=0x1001
+
+heltec_ht_de01.bootloader.tool=esptool_py
+heltec_ht_de01.bootloader.tool.default=esptool_py
+
+heltec_ht_de01.upload.tool=esptool_py
+heltec_ht_de01.upload.tool.default=esptool_py
+heltec_ht_de01.upload.tool.network=esp_ota
+
+heltec_ht_de01.upload.maximum_size=4026368
+heltec_ht_de01.upload.maximum_data_size=327680
+heltec_ht_de01.upload.flags=
+heltec_ht_de01.upload.extra_flags=
+heltec_ht_de01.upload.use_1200bps_touch=false
+heltec_ht_de01.upload.wait_for_upload_port=false
+
+heltec_ht_de01.serial.disableDTR=false
+heltec_ht_de01.serial.disableRTS=false
+
+heltec_ht_de01.build.tarch=xtensa
+heltec_ht_de01.build.bootloader_addr=0x0
+heltec_ht_de01.build.target=esp32s3
+heltec_ht_de01.build.mcu=esp32s3
+heltec_ht_de01.build.core=esp32
+heltec_ht_de01.build.variant=heltec_ht_de01
+heltec_ht_de01.build.board=HT_DE01
+
+heltec_ht_de01.build.usb_mode=1
+heltec_ht_de01.build.cdc_on_boot=0
+heltec_ht_de01.build.msc_on_boot=0
+heltec_ht_de01.build.dfu_on_boot=0
+heltec_ht_de01.build.f_cpu=240000000L
+heltec_ht_de01.build.flash_size=8MB
+heltec_ht_de01.build.flash_freq=80m
+heltec_ht_de01.build.flash_mode=dio
+heltec_ht_de01.build.boot=qio
+heltec_ht_de01.build.boot_freq=80m
+heltec_ht_de01.build.partitions=default_8MB
+heltec_ht_de01.build.loop_core=
+heltec_ht_de01.build.event_core=
+heltec_ht_de01.build.psram_type=qspi
+heltec_ht_de01.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_ht_de01.menu.LoopCore.1=Core 1
+heltec_ht_de01.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_ht_de01.menu.LoopCore.0=Core 0
+heltec_ht_de01.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_ht_de01.menu.EventsCore.1=Core 1
+heltec_ht_de01.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_ht_de01.menu.EventsCore.0=Core 0
+heltec_ht_de01.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_ht_de01.menu.CPUFreq.240=240MHz (WiFi)
+heltec_ht_de01.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_ht_de01.menu.CPUFreq.160=160MHz (WiFi)
+heltec_ht_de01.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_ht_de01.menu.CPUFreq.80=80MHz (WiFi)
+heltec_ht_de01.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_ht_de01.menu.CPUFreq.40=40MHz
+heltec_ht_de01.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_ht_de01.menu.CPUFreq.20=20MHz
+heltec_ht_de01.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_ht_de01.menu.CPUFreq.10=10MHz
+heltec_ht_de01.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_ht_de01.menu.UploadSpeed.921600=921600
+heltec_ht_de01.menu.UploadSpeed.921600.upload.speed=921600
+heltec_ht_de01.menu.UploadSpeed.115200=115200
+heltec_ht_de01.menu.UploadSpeed.115200.upload.speed=115200
+heltec_ht_de01.menu.UploadSpeed.256000.windows=256000
+heltec_ht_de01.menu.UploadSpeed.256000.upload.speed=256000
+heltec_ht_de01.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_ht_de01.menu.UploadSpeed.230400=230400
+heltec_ht_de01.menu.UploadSpeed.230400.upload.speed=230400
+heltec_ht_de01.menu.UploadSpeed.460800.linux=460800
+heltec_ht_de01.menu.UploadSpeed.460800.macosx=460800
+heltec_ht_de01.menu.UploadSpeed.460800.upload.speed=460800
+heltec_ht_de01.menu.UploadSpeed.512000.windows=512000
+heltec_ht_de01.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_ht_de01.menu.DebugLevel.none=None
+heltec_ht_de01.menu.DebugLevel.none.build.code_debug=0
+heltec_ht_de01.menu.DebugLevel.error=Error
+heltec_ht_de01.menu.DebugLevel.error.build.code_debug=1
+heltec_ht_de01.menu.DebugLevel.warn=Warn
+heltec_ht_de01.menu.DebugLevel.warn.build.code_debug=2
+heltec_ht_de01.menu.DebugLevel.info=Info
+heltec_ht_de01.menu.DebugLevel.info.build.code_debug=3
+heltec_ht_de01.menu.DebugLevel.debug=Debug
+heltec_ht_de01.menu.DebugLevel.debug.build.code_debug=4
+heltec_ht_de01.menu.DebugLevel.verbose=Verbose
+heltec_ht_de01.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_ht_de01.menu.einksize.0=eink_150
+heltec_ht_de01.menu.einksize.0.build.einksize=150;
+heltec_ht_de01.menu.einksize.1=eink_154
+heltec_ht_de01.menu.einksize.1.build.einksize=154;
+heltec_ht_de01.menu.einksize.2=eink_213
+heltec_ht_de01.menu.einksize.2.build.einksize=213;
+heltec_ht_de01.menu.einksize.3=eink_290
+heltec_ht_de01.menu.einksize.3.build.einksize=290;
+
+heltec_ht_de01.build.defines=   -DEINK={build.einksize}   -D{build.board}
+
+heltec_ht_de01.menu.EraseFlash.none=Disabled
+heltec_ht_de01.menu.EraseFlash.none.upload.erase_cmd=
+heltec_ht_de01.menu.EraseFlash.all=Enabled
+heltec_ht_de01.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_vision_master_e290.name=Vision Master E290
+heltec_vision_master_e290.vid.0=0x303a
+heltec_vision_master_e290.pid.0=0x1001
+
+heltec_vision_master_e290.bootloader.tool=esptool_py
+heltec_vision_master_e290.bootloader.tool.default=esptool_py
+
+heltec_vision_master_e290.upload.tool=esptool_py
+heltec_vision_master_e290.upload.tool.default=esptool_py
+heltec_vision_master_e290.upload.tool.network=esp_ota
+
+heltec_vision_master_e290.upload.maximum_size=3342336
+heltec_vision_master_e290.upload.maximum_data_size=327680
+heltec_vision_master_e290.upload.flags=
+heltec_vision_master_e290.upload.extra_flags=
+heltec_vision_master_e290.upload.use_1200bps_touch=false
+heltec_vision_master_e290.upload.wait_for_upload_port=false
+
+heltec_vision_master_e290.serial.disableDTR=false
+heltec_vision_master_e290.serial.disableRTS=false
+
+heltec_vision_master_e290.build.tarch=xtensa
+heltec_vision_master_e290.build.bootloader_addr=0x0
+heltec_vision_master_e290.build.target=esp32s3
+heltec_vision_master_e290.build.mcu=esp32s3
+heltec_vision_master_e290.build.core=esp32
+heltec_vision_master_e290.build.variant=heltec_vision_master_e290
+heltec_vision_master_e290.build.board=Heltec_Vision_Master_E290
+
+heltec_vision_master_e290.build.usb_mode=1
+heltec_vision_master_e290.build.cdc_on_boot=0
+heltec_vision_master_e290.build.msc_on_boot=0
+heltec_vision_master_e290.build.dfu_on_boot=0
+heltec_vision_master_e290.build.f_cpu=240000000L
+heltec_vision_master_e290.build.flash_size=8MB
+heltec_vision_master_e290.build.flash_freq=80m
+heltec_vision_master_e290.build.flash_mode=dio
+heltec_vision_master_e290.build.boot=qio
+heltec_vision_master_e290.build.boot_freq=80m
+heltec_vision_master_e290.build.partitions=default_8MB
+heltec_vision_master_e290.build.loop_core=
+heltec_vision_master_e290.build.event_core=
+heltec_vision_master_e290.build.psram_type=qspi
+heltec_vision_master_e290.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_vision_master_e290.menu.LoopCore.1=Core 1
+heltec_vision_master_e290.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_vision_master_e290.menu.LoopCore.0=Core 0
+heltec_vision_master_e290.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_vision_master_e290.menu.EventsCore.1=Core 1
+heltec_vision_master_e290.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_vision_master_e290.menu.EventsCore.0=Core 0
+heltec_vision_master_e290.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_vision_master_e290.menu.USBMode.hwcdc=Hardware CDC and JTAG
+heltec_vision_master_e290.menu.USBMode.hwcdc.build.usb_mode=1
+heltec_vision_master_e290.menu.USBMode.default=USB-OTG (TinyUSB)
+heltec_vision_master_e290.menu.USBMode.default.build.usb_mode=0
+
+heltec_vision_master_e290.menu.CDCOnBoot.default=Enabled
+heltec_vision_master_e290.menu.CDCOnBoot.default.build.cdc_on_boot=1
+heltec_vision_master_e290.menu.CDCOnBoot.cdc=Disabled
+heltec_vision_master_e290.menu.CDCOnBoot.cdc.build.cdc_on_boot=0
+
+heltec_vision_master_e290.menu.MSCOnBoot.default=Disabled
+heltec_vision_master_e290.menu.MSCOnBoot.default.build.msc_on_boot=0
+heltec_vision_master_e290.menu.MSCOnBoot.msc=Enabled (Requires USB-OTG Mode)
+heltec_vision_master_e290.menu.MSCOnBoot.msc.build.msc_on_boot=1
+
+heltec_vision_master_e290.menu.DFUOnBoot.default=Disabled
+heltec_vision_master_e290.menu.DFUOnBoot.default.build.dfu_on_boot=0
+heltec_vision_master_e290.menu.DFUOnBoot.dfu=Enabled (Requires USB-OTG Mode)
+heltec_vision_master_e290.menu.DFUOnBoot.dfu.build.dfu_on_boot=1
+
+heltec_vision_master_e290.menu.UploadMode.default=UART0 / Hardware CDC
+heltec_vision_master_e290.menu.UploadMode.default.upload.use_1200bps_touch=false
+heltec_vision_master_e290.menu.UploadMode.default.upload.wait_for_upload_port=false
+heltec_vision_master_e290.menu.UploadMode.cdc=USB-OTG CDC (TinyUSB)
+heltec_vision_master_e290.menu.UploadMode.cdc.upload.use_1200bps_touch=true
+heltec_vision_master_e290.menu.UploadMode.cdc.upload.wait_for_upload_port=true
+
+heltec_vision_master_e290.menu.CPUFreq.240=240MHz (WiFi)
+heltec_vision_master_e290.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_vision_master_e290.menu.CPUFreq.160=160MHz (WiFi)
+heltec_vision_master_e290.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_vision_master_e290.menu.CPUFreq.80=80MHz (WiFi)
+heltec_vision_master_e290.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_vision_master_e290.menu.CPUFreq.40=40MHz
+heltec_vision_master_e290.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_vision_master_e290.menu.CPUFreq.20=20MHz
+heltec_vision_master_e290.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_vision_master_e290.menu.CPUFreq.10=10MHz
+heltec_vision_master_e290.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_vision_master_e290.menu.UploadSpeed.921600=921600
+heltec_vision_master_e290.menu.UploadSpeed.921600.upload.speed=921600
+heltec_vision_master_e290.menu.UploadSpeed.115200=115200
+heltec_vision_master_e290.menu.UploadSpeed.115200.upload.speed=115200
+heltec_vision_master_e290.menu.UploadSpeed.256000.windows=256000
+heltec_vision_master_e290.menu.UploadSpeed.256000.upload.speed=256000
+heltec_vision_master_e290.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_vision_master_e290.menu.UploadSpeed.230400=230400
+heltec_vision_master_e290.menu.UploadSpeed.230400.upload.speed=230400
+heltec_vision_master_e290.menu.UploadSpeed.460800.linux=460800
+heltec_vision_master_e290.menu.UploadSpeed.460800.macosx=460800
+heltec_vision_master_e290.menu.UploadSpeed.460800.upload.speed=460800
+heltec_vision_master_e290.menu.UploadSpeed.512000.windows=512000
+heltec_vision_master_e290.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_vision_master_e290.menu.DebugLevel.none=None
+heltec_vision_master_e290.menu.DebugLevel.none.build.code_debug=0
+heltec_vision_master_e290.menu.DebugLevel.error=Error
+heltec_vision_master_e290.menu.DebugLevel.error.build.code_debug=1
+heltec_vision_master_e290.menu.DebugLevel.warn=Warn
+heltec_vision_master_e290.menu.DebugLevel.warn.build.code_debug=2
+heltec_vision_master_e290.menu.DebugLevel.info=Info
+heltec_vision_master_e290.menu.DebugLevel.info.build.code_debug=3
+heltec_vision_master_e290.menu.DebugLevel.debug=Debug
+heltec_vision_master_e290.menu.DebugLevel.debug.build.code_debug=4
+heltec_vision_master_e290.menu.DebugLevel.verbose=Verbose
+heltec_vision_master_e290.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_vision_master_e290.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_vision_master_e290.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_vision_master_e290.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_vision_master_e290.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_vision_master_e290.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_vision_master_e290.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_vision_master_e290.menu.LORAWAN_REGION.3=REGION_US915
+heltec_vision_master_e290.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_vision_master_e290.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_vision_master_e290.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_vision_master_e290.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_vision_master_e290.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_vision_master_e290.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_vision_master_e290.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_vision_master_e290.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_vision_master_e290.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_vision_master_e290.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_vision_master_e290.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_vision_master_e290.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_vision_master_e290.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_vision_master_e290.menu.LoRaWanDebugLevel.0=None
+heltec_vision_master_e290.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_vision_master_e290.menu.LoRaWanDebugLevel.1=Freq
+heltec_vision_master_e290.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_vision_master_e290.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_vision_master_e290.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_vision_master_e290.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_vision_master_e290.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_vision_master_e290.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_vision_master_e290.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_vision_master_e290.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_vision_master_e290.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_vision_master_e290.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_vision_master_e290.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_vision_master_e290.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_vision_master_e290.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_vision_master_e290.menu.SLOW_CLK_TPYE.0=Internal (default)
+heltec_vision_master_e290.menu.SLOW_CLK_TPYE.0.build.SLOW_CLK_TPYE=0
+heltec_vision_master_e290.menu.SLOW_CLK_TPYE.1=External 32K
+heltec_vision_master_e290.menu.SLOW_CLK_TPYE.1.build.SLOW_CLK_TPYE=1
+
+heltec_vision_master_e290.build.defines=-D{build.band}  -DMCU_ESP32_S3 -DHELTEC_BOARD=37 -DVision_Master_E290 -DSLOW_CLK_TPYE={build.SLOW_CLK_TPYE} -DRADIO_CHIP_SX1262  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+
+heltec_vision_master_e290.menu.EraseFlash.none=Disabled
+heltec_vision_master_e290.menu.EraseFlash.none.upload.erase_cmd=
+heltec_vision_master_e290.menu.EraseFlash.all=Enabled
+heltec_vision_master_e290.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_vision_master_t190.name=Vision Master T190
+heltec_vision_master_t190.vid.0=0x303a
+heltec_vision_master_t190.pid.0=0x1001
+
+heltec_vision_master_t190.bootloader.tool=esptool_py
+heltec_vision_master_t190.bootloader.tool.default=esptool_py
+
+heltec_vision_master_t190.upload.tool=esptool_py
+heltec_vision_master_t190.upload.tool.default=esptool_py
+heltec_vision_master_t190.upload.tool.network=esp_ota
+
+heltec_vision_master_t190.upload.maximum_size=3342336
+heltec_vision_master_t190.upload.maximum_data_size=327680
+heltec_vision_master_t190.upload.flags=
+heltec_vision_master_t190.upload.extra_flags=
+heltec_vision_master_t190.upload.use_1200bps_touch=false
+heltec_vision_master_t190.upload.wait_for_upload_port=false
+
+heltec_vision_master_t190.serial.disableDTR=false
+heltec_vision_master_t190.serial.disableRTS=false
+
+heltec_vision_master_t190.build.tarch=xtensa
+heltec_vision_master_t190.build.bootloader_addr=0x0
+heltec_vision_master_t190.build.target=esp32s3
+heltec_vision_master_t190.build.mcu=esp32s3
+heltec_vision_master_t190.build.core=esp32
+heltec_vision_master_t190.build.variant=heltec_vision_master_t190
+heltec_vision_master_t190.build.board=Heltec_Vision_Master_T190
+
+heltec_vision_master_t190.build.usb_mode=1
+heltec_vision_master_t190.build.cdc_on_boot=0
+heltec_vision_master_t190.build.msc_on_boot=0
+heltec_vision_master_t190.build.dfu_on_boot=0
+heltec_vision_master_t190.build.f_cpu=240000000L
+heltec_vision_master_t190.build.flash_size=8MB
+heltec_vision_master_t190.build.flash_freq=80m
+heltec_vision_master_t190.build.flash_mode=dio
+heltec_vision_master_t190.build.boot=qio
+heltec_vision_master_t190.build.boot_freq=80m
+heltec_vision_master_t190.build.partitions=default_8MB
+heltec_vision_master_t190.build.loop_core=
+heltec_vision_master_t190.build.event_core=
+heltec_vision_master_t190.build.psram_type=qspi
+heltec_vision_master_t190.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_vision_master_t190.menu.LoopCore.1=Core 1
+heltec_vision_master_t190.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_vision_master_t190.menu.LoopCore.0=Core 0
+heltec_vision_master_t190.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_vision_master_t190.menu.EventsCore.1=Core 1
+heltec_vision_master_t190.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_vision_master_t190.menu.EventsCore.0=Core 0
+heltec_vision_master_t190.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_vision_master_t190.menu.USBMode.hwcdc=Hardware CDC and JTAG
+heltec_vision_master_t190.menu.USBMode.hwcdc.build.usb_mode=1
+heltec_vision_master_t190.menu.USBMode.default=USB-OTG (TinyUSB)
+heltec_vision_master_t190.menu.USBMode.default.build.usb_mode=0
+
+heltec_vision_master_t190.menu.CDCOnBoot.default=Enabled
+heltec_vision_master_t190.menu.CDCOnBoot.default.build.cdc_on_boot=1
+heltec_vision_master_t190.menu.CDCOnBoot.cdc=Disabled
+heltec_vision_master_t190.menu.CDCOnBoot.cdc.build.cdc_on_boot=0
+
+heltec_vision_master_t190.menu.MSCOnBoot.default=Disabled
+heltec_vision_master_t190.menu.MSCOnBoot.default.build.msc_on_boot=0
+heltec_vision_master_t190.menu.MSCOnBoot.msc=Enabled (Requires USB-OTG Mode)
+heltec_vision_master_t190.menu.MSCOnBoot.msc.build.msc_on_boot=1
+
+heltec_vision_master_t190.menu.DFUOnBoot.default=Disabled
+heltec_vision_master_t190.menu.DFUOnBoot.default.build.dfu_on_boot=0
+heltec_vision_master_t190.menu.DFUOnBoot.dfu=Enabled (Requires USB-OTG Mode)
+heltec_vision_master_t190.menu.DFUOnBoot.dfu.build.dfu_on_boot=1
+
+heltec_vision_master_t190.menu.UploadMode.default=UART0 / Hardware CDC
+heltec_vision_master_t190.menu.UploadMode.default.upload.use_1200bps_touch=false
+heltec_vision_master_t190.menu.UploadMode.default.upload.wait_for_upload_port=false
+heltec_vision_master_t190.menu.UploadMode.cdc=USB-OTG CDC (TinyUSB)
+heltec_vision_master_t190.menu.UploadMode.cdc.upload.use_1200bps_touch=true
+heltec_vision_master_t190.menu.UploadMode.cdc.upload.wait_for_upload_port=true
+
+heltec_vision_master_t190.menu.CPUFreq.240=240MHz (WiFi)
+heltec_vision_master_t190.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_vision_master_t190.menu.CPUFreq.160=160MHz (WiFi)
+heltec_vision_master_t190.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_vision_master_t190.menu.CPUFreq.80=80MHz (WiFi)
+heltec_vision_master_t190.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_vision_master_t190.menu.CPUFreq.40=40MHz
+heltec_vision_master_t190.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_vision_master_t190.menu.CPUFreq.20=20MHz
+heltec_vision_master_t190.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_vision_master_t190.menu.CPUFreq.10=10MHz
+heltec_vision_master_t190.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_vision_master_t190.menu.UploadSpeed.921600=921600
+heltec_vision_master_t190.menu.UploadSpeed.921600.upload.speed=921600
+heltec_vision_master_t190.menu.UploadSpeed.115200=115200
+heltec_vision_master_t190.menu.UploadSpeed.115200.upload.speed=115200
+heltec_vision_master_t190.menu.UploadSpeed.256000.windows=256000
+heltec_vision_master_t190.menu.UploadSpeed.256000.upload.speed=256000
+heltec_vision_master_t190.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_vision_master_t190.menu.UploadSpeed.230400=230400
+heltec_vision_master_t190.menu.UploadSpeed.230400.upload.speed=230400
+heltec_vision_master_t190.menu.UploadSpeed.460800.linux=460800
+heltec_vision_master_t190.menu.UploadSpeed.460800.macosx=460800
+heltec_vision_master_t190.menu.UploadSpeed.460800.upload.speed=460800
+heltec_vision_master_t190.menu.UploadSpeed.512000.windows=512000
+heltec_vision_master_t190.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_vision_master_t190.menu.DebugLevel.none=None
+heltec_vision_master_t190.menu.DebugLevel.none.build.code_debug=0
+heltec_vision_master_t190.menu.DebugLevel.error=Error
+heltec_vision_master_t190.menu.DebugLevel.error.build.code_debug=1
+heltec_vision_master_t190.menu.DebugLevel.warn=Warn
+heltec_vision_master_t190.menu.DebugLevel.warn.build.code_debug=2
+heltec_vision_master_t190.menu.DebugLevel.info=Info
+heltec_vision_master_t190.menu.DebugLevel.info.build.code_debug=3
+heltec_vision_master_t190.menu.DebugLevel.debug=Debug
+heltec_vision_master_t190.menu.DebugLevel.debug.build.code_debug=4
+heltec_vision_master_t190.menu.DebugLevel.verbose=Verbose
+heltec_vision_master_t190.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_vision_master_t190.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_vision_master_t190.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_vision_master_t190.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_vision_master_t190.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_vision_master_t190.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_vision_master_t190.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_vision_master_t190.menu.LORAWAN_REGION.3=REGION_US915
+heltec_vision_master_t190.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_vision_master_t190.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_vision_master_t190.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_vision_master_t190.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_vision_master_t190.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_vision_master_t190.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_vision_master_t190.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_vision_master_t190.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_vision_master_t190.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_vision_master_t190.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_vision_master_t190.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_vision_master_t190.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_vision_master_t190.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_vision_master_t190.menu.LoRaWanDebugLevel.0=None
+heltec_vision_master_t190.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_vision_master_t190.menu.LoRaWanDebugLevel.1=Freq
+heltec_vision_master_t190.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_vision_master_t190.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_vision_master_t190.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_vision_master_t190.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_vision_master_t190.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_vision_master_t190.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_vision_master_t190.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_vision_master_t190.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_vision_master_t190.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_vision_master_t190.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_vision_master_t190.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_vision_master_t190.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_vision_master_t190.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_vision_master_t190.menu.SLOW_CLK_TPYE.0=Internal (default)
+heltec_vision_master_t190.menu.SLOW_CLK_TPYE.0.build.SLOW_CLK_TPYE=0
+heltec_vision_master_t190.menu.SLOW_CLK_TPYE.1=External 32K
+heltec_vision_master_t190.menu.SLOW_CLK_TPYE.1.build.SLOW_CLK_TPYE=1
+
+heltec_vision_master_t190.build.defines=-D{build.band}  -DMCU_ESP32_S3 -DHELTEC_BOARD=38 -DVision_Master_T190 -DSLOW_CLK_TPYE={build.SLOW_CLK_TPYE} -DRADIO_CHIP_SX1262  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+
+heltec_vision_master_t190.menu.EraseFlash.none=Disabled
+heltec_vision_master_t190.menu.EraseFlash.none.upload.erase_cmd=
+heltec_vision_master_t190.menu.EraseFlash.all=Enabled
+heltec_vision_master_t190.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+heltec_vision_master_e_213.name=Vision Master E213
+heltec_vision_master_e_213.vid.0=0x303a
+heltec_vision_master_e_213.pid.0=0x1001
+
+heltec_vision_master_e_213.bootloader.tool=esptool_py
+heltec_vision_master_e_213.bootloader.tool.default=esptool_py
+
+heltec_vision_master_e_213.upload.tool=esptool_py
+heltec_vision_master_e_213.upload.tool.default=esptool_py
+heltec_vision_master_e_213.upload.tool.network=esp_ota
+
+heltec_vision_master_e_213.upload.maximum_size=3342336
+heltec_vision_master_e_213.upload.maximum_data_size=327680
+heltec_vision_master_e_213.upload.flags=
+heltec_vision_master_e_213.upload.extra_flags=
+heltec_vision_master_e_213.upload.use_1200bps_touch=false
+heltec_vision_master_e_213.upload.wait_for_upload_port=false
+
+heltec_vision_master_e_213.serial.disableDTR=false
+heltec_vision_master_e_213.serial.disableRTS=false
+
+heltec_vision_master_e_213.build.tarch=xtensa
+heltec_vision_master_e_213.build.bootloader_addr=0x0
+heltec_vision_master_e_213.build.target=esp32s3
+heltec_vision_master_e_213.build.mcu=esp32s3
+heltec_vision_master_e_213.build.core=esp32
+heltec_vision_master_e_213.build.variant=heltec_vision_master_e_213
+heltec_vision_master_e_213.build.board=Heltec_Vision_Master_E_213
+
+heltec_vision_master_e_213.build.usb_mode=1
+heltec_vision_master_e_213.build.cdc_on_boot=0
+heltec_vision_master_e_213.build.msc_on_boot=0
+heltec_vision_master_e_213.build.dfu_on_boot=0
+heltec_vision_master_e_213.build.f_cpu=240000000L
+heltec_vision_master_e_213.build.flash_size=8MB
+heltec_vision_master_e_213.build.flash_freq=80m
+heltec_vision_master_e_213.build.flash_mode=dio
+heltec_vision_master_e_213.build.boot=qio
+heltec_vision_master_e_213.build.boot_freq=80m
+heltec_vision_master_e_213.build.partitions=default_8MB
+heltec_vision_master_e_213.build.loop_core=
+heltec_vision_master_e_213.build.event_core=
+heltec_vision_master_e_213.build.psram_type=qspi
+heltec_vision_master_e_213.build.memory_type={build.boot}_{build.psram_type}
+
+heltec_vision_master_e_213.menu.LoopCore.1=Core 1
+heltec_vision_master_e_213.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+heltec_vision_master_e_213.menu.LoopCore.0=Core 0
+heltec_vision_master_e_213.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+heltec_vision_master_e_213.menu.EventsCore.1=Core 1
+heltec_vision_master_e_213.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+heltec_vision_master_e_213.menu.EventsCore.0=Core 0
+heltec_vision_master_e_213.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+heltec_vision_master_e_213.menu.USBMode.hwcdc=Hardware CDC and JTAG
+heltec_vision_master_e_213.menu.USBMode.hwcdc.build.usb_mode=1
+heltec_vision_master_e_213.menu.USBMode.default=USB-OTG (TinyUSB)
+heltec_vision_master_e_213.menu.USBMode.default.build.usb_mode=0
+
+heltec_vision_master_e_213.menu.CDCOnBoot.default=Enabled
+heltec_vision_master_e_213.menu.CDCOnBoot.default.build.cdc_on_boot=1
+heltec_vision_master_e_213.menu.CDCOnBoot.cdc=Disabled
+heltec_vision_master_e_213.menu.CDCOnBoot.cdc.build.cdc_on_boot=0
+
+heltec_vision_master_e_213.menu.MSCOnBoot.default=Disabled
+heltec_vision_master_e_213.menu.MSCOnBoot.default.build.msc_on_boot=0
+heltec_vision_master_e_213.menu.MSCOnBoot.msc=Enabled (Requires USB-OTG Mode)
+heltec_vision_master_e_213.menu.MSCOnBoot.msc.build.msc_on_boot=1
+
+heltec_vision_master_e_213.menu.DFUOnBoot.default=Disabled
+heltec_vision_master_e_213.menu.DFUOnBoot.default.build.dfu_on_boot=0
+heltec_vision_master_e_213.menu.DFUOnBoot.dfu=Enabled (Requires USB-OTG Mode)
+heltec_vision_master_e_213.menu.DFUOnBoot.dfu.build.dfu_on_boot=1
+
+heltec_vision_master_e_213.menu.UploadMode.default=UART0 / Hardware CDC
+heltec_vision_master_e_213.menu.UploadMode.default.upload.use_1200bps_touch=false
+heltec_vision_master_e_213.menu.UploadMode.default.upload.wait_for_upload_port=false
+heltec_vision_master_e_213.menu.UploadMode.cdc=USB-OTG CDC (TinyUSB)
+heltec_vision_master_e_213.menu.UploadMode.cdc.upload.use_1200bps_touch=true
+heltec_vision_master_e_213.menu.UploadMode.cdc.upload.wait_for_upload_port=true
+
+heltec_vision_master_e_213.menu.CPUFreq.240=240MHz (WiFi)
+heltec_vision_master_e_213.menu.CPUFreq.240.build.f_cpu=240000000L
+heltec_vision_master_e_213.menu.CPUFreq.160=160MHz (WiFi)
+heltec_vision_master_e_213.menu.CPUFreq.160.build.f_cpu=160000000L
+heltec_vision_master_e_213.menu.CPUFreq.80=80MHz (WiFi)
+heltec_vision_master_e_213.menu.CPUFreq.80.build.f_cpu=80000000L
+heltec_vision_master_e_213.menu.CPUFreq.40=40MHz
+heltec_vision_master_e_213.menu.CPUFreq.40.build.f_cpu=40000000L
+heltec_vision_master_e_213.menu.CPUFreq.20=20MHz
+heltec_vision_master_e_213.menu.CPUFreq.20.build.f_cpu=20000000L
+heltec_vision_master_e_213.menu.CPUFreq.10=10MHz
+heltec_vision_master_e_213.menu.CPUFreq.10.build.f_cpu=10000000L
+
+heltec_vision_master_e_213.menu.UploadSpeed.921600=921600
+heltec_vision_master_e_213.menu.UploadSpeed.921600.upload.speed=921600
+heltec_vision_master_e_213.menu.UploadSpeed.115200=115200
+heltec_vision_master_e_213.menu.UploadSpeed.115200.upload.speed=115200
+heltec_vision_master_e_213.menu.UploadSpeed.256000.windows=256000
+heltec_vision_master_e_213.menu.UploadSpeed.256000.upload.speed=256000
+heltec_vision_master_e_213.menu.UploadSpeed.230400.windows.upload.speed=256000
+heltec_vision_master_e_213.menu.UploadSpeed.230400=230400
+heltec_vision_master_e_213.menu.UploadSpeed.230400.upload.speed=230400
+heltec_vision_master_e_213.menu.UploadSpeed.460800.linux=460800
+heltec_vision_master_e_213.menu.UploadSpeed.460800.macosx=460800
+heltec_vision_master_e_213.menu.UploadSpeed.460800.upload.speed=460800
+heltec_vision_master_e_213.menu.UploadSpeed.512000.windows=512000
+heltec_vision_master_e_213.menu.UploadSpeed.512000.upload.speed=512000
+
+heltec_vision_master_e_213.menu.DebugLevel.none=None
+heltec_vision_master_e_213.menu.DebugLevel.none.build.code_debug=0
+heltec_vision_master_e_213.menu.DebugLevel.error=Error
+heltec_vision_master_e_213.menu.DebugLevel.error.build.code_debug=1
+heltec_vision_master_e_213.menu.DebugLevel.warn=Warn
+heltec_vision_master_e_213.menu.DebugLevel.warn.build.code_debug=2
+heltec_vision_master_e_213.menu.DebugLevel.info=Info
+heltec_vision_master_e_213.menu.DebugLevel.info.build.code_debug=3
+heltec_vision_master_e_213.menu.DebugLevel.debug=Debug
+heltec_vision_master_e_213.menu.DebugLevel.debug.build.code_debug=4
+heltec_vision_master_e_213.menu.DebugLevel.verbose=Verbose
+heltec_vision_master_e_213.menu.DebugLevel.verbose.build.code_debug=5
+
+heltec_vision_master_e_213.menu.LORAWAN_REGION.0=REGION_EU868
+heltec_vision_master_e_213.menu.LORAWAN_REGION.0.build.band=REGION_EU868
+heltec_vision_master_e_213.menu.LORAWAN_REGION.1=REGION_EU433
+heltec_vision_master_e_213.menu.LORAWAN_REGION.1.build.band=REGION_EU433
+heltec_vision_master_e_213.menu.LORAWAN_REGION.2=REGION_CN470
+heltec_vision_master_e_213.menu.LORAWAN_REGION.2.build.band=REGION_CN470
+heltec_vision_master_e_213.menu.LORAWAN_REGION.3=REGION_US915
+heltec_vision_master_e_213.menu.LORAWAN_REGION.3.build.band=REGION_US915
+heltec_vision_master_e_213.menu.LORAWAN_REGION.4=REGION_AU915
+heltec_vision_master_e_213.menu.LORAWAN_REGION.4.build.band=REGION_AU915
+heltec_vision_master_e_213.menu.LORAWAN_REGION.5=REGION_CN779
+heltec_vision_master_e_213.menu.LORAWAN_REGION.5.build.band=REGION_CN779
+heltec_vision_master_e_213.menu.LORAWAN_REGION.6=REGION_AS923
+heltec_vision_master_e_213.menu.LORAWAN_REGION.6.build.band=REGION_AS923
+heltec_vision_master_e_213.menu.LORAWAN_REGION.7=REGION_KR920
+heltec_vision_master_e_213.menu.LORAWAN_REGION.7.build.band=REGION_KR920
+heltec_vision_master_e_213.menu.LORAWAN_REGION.8=REGION_IN865
+heltec_vision_master_e_213.menu.LORAWAN_REGION.8.build.band=REGION_IN865
+heltec_vision_master_e_213.menu.LORAWAN_REGION.9=REGION_US915_HYBRID
+heltec_vision_master_e_213.menu.LORAWAN_REGION.9.build.band=REGION_US915_HYBRID
+
+heltec_vision_master_e_213.menu.LoRaWanDebugLevel.0=None
+heltec_vision_master_e_213.menu.LoRaWanDebugLevel.0.build.LoRaWanDebugLevel=0
+heltec_vision_master_e_213.menu.LoRaWanDebugLevel.1=Freq
+heltec_vision_master_e_213.menu.LoRaWanDebugLevel.1.build.LoRaWanDebugLevel=1
+heltec_vision_master_e_213.menu.LoRaWanDebugLevel.2=Freq && DIO
+heltec_vision_master_e_213.menu.LoRaWanDebugLevel.2.build.LoRaWanDebugLevel=2
+heltec_vision_master_e_213.menu.LoRaWanDebugLevel.3=Freq && DIO && PW
+heltec_vision_master_e_213.menu.LoRaWanDebugLevel.3.build.LoRaWanDebugLevel=3
+
+heltec_vision_master_e_213.menu.LORAWAN_DEVEUI.0=CUSTOM
+heltec_vision_master_e_213.menu.LORAWAN_DEVEUI.0.build.LORAWAN_DEVEUI_AUTO=0
+heltec_vision_master_e_213.menu.LORAWAN_DEVEUI.1=Generate By ChipID
+heltec_vision_master_e_213.menu.LORAWAN_DEVEUI.1.build.LORAWAN_DEVEUI_AUTO=1
+
+heltec_vision_master_e_213.menu.LORAWAN_PREAMBLE_LENGTH.0=8(default)
+heltec_vision_master_e_213.menu.LORAWAN_PREAMBLE_LENGTH.0.build.LORAWAN_PREAMBLE_LENGTH=8
+heltec_vision_master_e_213.menu.LORAWAN_PREAMBLE_LENGTH.1=16(For M00 and M00L)
+heltec_vision_master_e_213.menu.LORAWAN_PREAMBLE_LENGTH.1.build.LORAWAN_PREAMBLE_LENGTH=16
+
+heltec_vision_master_e_213.menu.SLOW_CLK_TPYE.0=Internal (default)
+heltec_vision_master_e_213.menu.SLOW_CLK_TPYE.0.build.SLOW_CLK_TPYE=0
+heltec_vision_master_e_213.menu.SLOW_CLK_TPYE.1=External 32K
+heltec_vision_master_e_213.menu.SLOW_CLK_TPYE.1.build.SLOW_CLK_TPYE=1
+
+heltec_vision_master_e_213.build.defines=-D{build.band}  -DMCU_ESP32_S3 -DHELTEC_BOARD=36 -DVision_Master_E_213 -DSLOW_CLK_TPYE={build.SLOW_CLK_TPYE} -DRADIO_CHIP_SX1262  -DLoRaWAN_DEBUG_LEVEL={build.LoRaWanDebugLevel} -DACTIVE_REGION=LORAMAC_{build.band} -DLORAWAN_PREAMBLE_LENGTH={build.LORAWAN_PREAMBLE_LENGTH} -DLORAWAN_DEVEUI_AUTO={build.LORAWAN_DEVEUI_AUTO} -D{build.board}
+
+heltec_vision_master_e_213.menu.EraseFlash.none=Disabled
+heltec_vision_master_e_213.menu.EraseFlash.none.upload.erase_cmd=
+heltec_vision_master_e_213.menu.EraseFlash.all=Enabled
+heltec_vision_master_e_213.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
