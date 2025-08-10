@@ -1,1 +1,2 @@
-HELTEC lora 32 WIFI BLE V3
+HELTEC lora 32 WIFI BLE V3.1
+Arduino 2.3.6
