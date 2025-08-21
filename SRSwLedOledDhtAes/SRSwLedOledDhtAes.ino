@@ -134,20 +134,24 @@ void sendData() {
   if (!lora_idle) return;
 
   float tempC = dht.readTemperature();
-  if (isnan(tempC)) tempC = 0.0; // กรณีอ่านไม่ได้
-  // เตรียมข้อมูลส่ง: 1 ไบต์ LED + 6 ไบต์ temp float เป็น string (ตัวอย่าง)
-  String payloadStr = String(ledState ? '1' : '0') + String(tempC, 1); // e.g. "134.5"
+  if (isnan(tempC)) tempC = 0.0;
 
-  memset(txpacket, 0, BUFFER_SIZE);
-  strncpy(txpacket, payloadStr.c_str(), BUFFER_SIZE - 1);
+  uint8_t buffer[16];  
+  memset(buffer, 0, sizeof(buffer));
 
-  encryptAES((uint8_t *)txpacket, userKey);
+  buffer[0] = ledState ? 1 : 0;                  // LED state
+  memcpy(&buffer[1], &tempC, sizeof(float));     // copy float เป็น binary
 
-  Radio.Send((uint8_t *)txpacket, 16); // AES เข้ารหัส 16 ไบต์
+  encryptAES(buffer, userKey);                   // เข้ารหัส AES
+
+  Radio.Send(buffer, 16);                        // ส่ง 16 bytes
   lora_idle = false;
 
-  Serial.print("Sent encrypted data: ");
-  Serial.println(payloadStr);
+  Serial.print("Sent (LED=");
+  Serial.print(ledState ? "ON" : "OFF");
+  Serial.print(", Temp=");
+  Serial.print(tempC);
+  Serial.println(")");
 }
 
 void updateDisplay() {
@@ -166,6 +170,20 @@ void updateDisplay() {
   display.display();
 }
 
+void updateDisplayWithReceived(float receivedTemp) {
+  display.clear();
+  display.setTextAlignment(TEXT_ALIGN_CENTER);
+  display.setFont(ArialMT_Plain_16);
+  display.drawString(64, 10, "RX Temp: " + String(receivedTemp, 1) + " C");
+  display.drawString(64, 30, ledState ? "LED ON" : "LED OFF");
+
+  if (ledState) display.fillCircle(64, 55, 10);
+  else display.drawCircle(64, 55, 10);
+
+  display.display();
+}
+
+
 void OnTxDone() {
   Serial.println("TX done");
   lora_idle = true;
@@ -179,22 +197,23 @@ void OnTxTimeout() {
 }
 
 void OnRxDone(uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr) {
-  if (size < 16) {
+  if (size != 16) {   // ต้องได้ 16 bytes เพราะ AES block size
     Serial.println("Invalid packet size");
     Radio.Rx(0);
     return;
   }
 
-  memcpy(rxpacket, payload, size);
-  decryptAES((uint8_t *)rxpacket, userKey);
-  rxpacket[size] = 0;
+  uint8_t buffer[16];
+  memcpy(buffer, payload, 16);
 
-  // แยกข้อมูล
-  char receivedLed = rxpacket[0];
-  String tempStr = String((char *)&rxpacket[1]);
-  float receivedTemp = tempStr.toFloat();
+  decryptAES(buffer, userKey);
 
-  ledState = (receivedLed == '1');
+  // ดึงข้อมูลออก
+  ledState = buffer[0] ? true : false;
+
+  float receivedTemp;
+  memcpy(&receivedTemp, &buffer[1], sizeof(float));
+
   digitalWrite(LED_PIN, ledState ? HIGH : LOW);
 
   Serial.print("Received LED: ");
@@ -202,8 +221,8 @@ void OnRxDone(uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr) {
   Serial.print(", Temp: ");
   Serial.println(receivedTemp);
 
-  updateDisplay();
-
+  updateDisplayWithReceived(receivedTemp);   // ใช้ฟังก์ชันใหม่
   lora_idle = true;
   Radio.Rx(0);
 }
+
